@@ -2,7 +2,7 @@ import './NavBar.scss';
 import logo from '../../images/MicroStore_Logo.svg';
 import BuildIcon from '@mui/icons-material/Build';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ShoppingCart from '../shoppingCart/ShopCart';
+import ShoppingCart from '../ShoppingCart/ShopCart';
 
 function NavBar() {
     return (
@@ -14,7 +14,7 @@ function NavBar() {
                 <ul>
                     <li>
                         Carrito
-                        <ShoppingCart items={3} />
+                        <ShoppingCart items={6} />
                     </li>
                     <li>
                         Usuario
