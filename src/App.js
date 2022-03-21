@@ -17,9 +17,9 @@ function App() {
 
       <Container maxWidth="lg">
         <div className='card-container'>
-          <ProdcutCard productName='Procesador Ryzen 9' productDescription='AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz' productImage={image1} />
-          <ProdcutCard productName='Placa Madre Gigabyte H410m' productDescription='Linea: Ultra Durable' productImage={image2} />
-          <ProdcutCard productName='Nvidia MSI Ventus XS' productDescription='GTX 1650 D6 VENTUS XS OC OC Edition' productImage={image3} />
+          <ProdcutCard productName='Procesador Ryzen 9' productDescription='AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz' productPrice={'500.000'} productStock={20} productImage={image1} />
+          <ProdcutCard productName='Placa Madre Gigabyte H410m' productDescription='Linea: Ultra Durable' productPrice={'120.000'} productStock={15} productImage={image2} />
+          <ProdcutCard productName='Nvidia MSI Ventus XS' productDescription='GTX 1650 D6 VENTUS XS OC OC Edition' productPrice={'340.000'} productStock={25} productImage={image3} />
         </div>
       </Container>
 

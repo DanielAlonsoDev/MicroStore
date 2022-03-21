@@ -10,22 +10,10 @@ function NavBar() {
             <div>
                 <img src={logo} alt="Logo del sitio"/>
             </div>
-            <nav>
-                <ul>
-                    <li>
-                        Carrito
-                        <ShoppingCart items={6} />
-                    </li>
-                    <li>
-                        Usuario
-                        <i><AccountCircleIcon /></i>
-                    </li>
-                    <li>
-                        Configuración
-                        <i><BuildIcon /></i>
-                    </li>
-                </ul>
-            </nav>
+            <div className='shop-cart'>
+                <span>Carrito</span>
+                <i><ShoppingCart items={1}/></i>
+            </div>
         </header>
     );
 }

@@ -1,0 +1,53 @@
+.product-card {
+    .product-info{
+        display: grid;
+        grid-template-rows: 40px 60px 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'productName productName'
+            'description description'
+            'gama price';
+
+        .product-name {
+            grid-area: productName;
+        }
+
+        .product-description {
+            grid-area: description;
+        }
+
+        .product-price {
+            grid-area: gama;
+        }
+        
+        .product-price {
+            grid-area: price;
+            text-align: right;
+        }
+    }
+    .product-actions {
+        i {
+            color: #17D7A0;
+         }
+
+        &-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .add-controls {
+                display: flex;
+                align-items: center;
+            }
+            .product-add-button {
+                color: #3c3c3c;
+
+                i {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
