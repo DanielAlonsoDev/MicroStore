@@ -10,6 +10,12 @@ import image3 from './images/grafica.webp';
 //Container
 import Container from '@mui/material/Container';
 
+let productList = [
+  {name : 'Procesador Ryzen 9', description : 'AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz', price : 500000, stock : 3, image : image1},
+  {name : 'Placa Madre Gigabyte H410m', description : 'Linea: Ultra Durable', price : 120000, stock : 5, image : image2},
+  {name : 'Nvidia MSI Ventus XS', description : 'GTX 1650 D6 VENTUS XS OC OC Edition', price : 340000, stock : 6, image : image3}
+];
+
 function App() {
   return (
     <div className="App">
@@ -17,9 +23,9 @@ function App() {
 
       <Container maxWidth="lg">
         <div className='card-container'>
-          <ProdcutCard productName='Procesador Ryzen 9' productDescription='AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz' productPrice={'500.000'} productStock={20} productImage={image1} />
-          <ProdcutCard productName='Placa Madre Gigabyte H410m' productDescription='Linea: Ultra Durable' productPrice={'120.000'} productStock={15} productImage={image2} />
-          <ProdcutCard productName='Nvidia MSI Ventus XS' productDescription='GTX 1650 D6 VENTUS XS OC OC Edition' productPrice={'340.000'} productStock={25} productImage={image3} />
+          <ProdcutCard productName={productList[0].name} productDescription={productList[0].description} productPrice={productList[0].price} productStock={productList[0].stock} productImage={productList[0].image}/>
+          <ProdcutCard productName={productList[1].name} productDescription={productList[1].description} productPrice={productList[1].price} productStock={productList[1].stock} productImage={productList[1].image} />
+          <ProdcutCard productName={productList[2].name} productDescription={productList[2].description} productPrice={productList[2].price} productStock={productList[2].stock} productImage={productList[2].image} />
         </div>
       </Container>
 

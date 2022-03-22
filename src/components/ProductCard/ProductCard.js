@@ -9,11 +9,31 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import './ProductCard.scss';
 import ProductGama from '../ProductGama/ProductGama';
-
+import React, { useState } from 'react';
 
 function ProductCard(props) {
+  //Props
   const { productName, productDescription, productPrice, productStock, productImage } = props;
   const productAltText = productName.replace(/\s+/g, '_');
+
+  //Difinimos los estados y su logica de cambio
+  const [productCount, setCount] = useState(1);
+
+  function addProductCount() {
+    if(productCount < productStock){
+      setCount(productCount + 1);
+    } else {
+      setCount(productCount);
+    }
+  }
+
+  function removeProductCount() {
+    if (productCount > 1) {
+      setCount(productCount - 1);
+    } else {
+      setCount(productCount);
+    }
+  }
 
   return (
     <Card sx={{ textAlign: 'left', maxWidth: 345 }} className='product-card'>
@@ -40,17 +60,22 @@ function ProductCard(props) {
 
       </CardContent>
       <CardActions className='product-actions'>
+
         <div className='product-actions-wrap'>
           <Typography color="text.secondary" className='product-stock'>
             {'Stock: ' + productStock}
           </Typography>
+
           <div className='add-controls'>
-            <Button><i><RemoveIcon /></i></Button>
-            <Typography component='p'>1</Typography>
-            <Button><i><AddIcon /></i></Button>
+            {/* BOTON DE RESTA */}
+            <Button onClick={removeProductCount}><i><RemoveIcon /></i></Button>
+            <Typography component='p'>{productCount}</Typography>
+            {/* BOTON DE SUMA */}
+            <Button onClick={addProductCount}><i><AddIcon /></i></Button>
           </div>
-          <Button size="small" className='product-add-button'>Agregar <i><ShoppingCart /></i></Button>
+          <Button size="small" className='product-add-button' onClick={() => setCount(1)}>Agregar <i><ShoppingCart /></i></Button>
         </div>
+
       </CardActions>
     </Card>
   );

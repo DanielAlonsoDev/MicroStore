@@ -1,7 +1,5 @@
 import './NavBar.scss';
 import logo from '../../images/MicroStore_Logo.svg';
-import BuildIcon from '@mui/icons-material/Build';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCart from '../ShoppingCart/ShopCart';
 
 function NavBar() {
