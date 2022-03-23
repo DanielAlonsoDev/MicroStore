@@ -9,11 +9,13 @@ import image2 from './images/board.webp';
 import image3 from './images/grafica.webp';
 //Container
 import Container from '@mui/material/Container';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <ItemListContainer bienvenida='Bienvenido a nuestra tienda' nombre='Daniel'/>
 
       <Container maxWidth="lg">
         <div className='card-container'>
@@ -22,7 +24,7 @@ function App() {
           <ProdcutCard productName='Nvidia MSI Ventus XS' productDescription='GTX 1650 D6 VENTUS XS OC OC Edition' productImage={image3} />
         </div>
       </Container>
-
+      
     </div>
   );
 }
