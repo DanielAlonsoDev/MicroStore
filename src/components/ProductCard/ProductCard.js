@@ -9,7 +9,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import './ProductCard.scss';
 import ProductGama from '../ProductGama/ProductGama';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function ProductCard(props) {
   //Props
@@ -20,9 +20,10 @@ function ProductCard(props) {
   const [productCount, setCount] = useState(1);
 
   function addProductCount() {
-    if(productCount < productStock){
+    if (productCount < productStock) {
       setCount(productCount + 1);
-    } else {
+    }
+    else {
       setCount(productCount);
     }
   }
@@ -30,10 +31,18 @@ function ProductCard(props) {
   function removeProductCount() {
     if (productCount > 1) {
       setCount(productCount - 1);
-    } else {
+    }
+    else {
       setCount(productCount);
     }
   }
+
+  //Alerta se seleccion de todo el inventario
+  useEffect(() => {
+    if (productCount === productStock) {
+      alert('Seleccionaste todos los productos del stock');
+    }
+  }, [productCount, productStock]);
 
   return (
     <Card sx={{ textAlign: 'left', maxWidth: 345 }} className='product-card'>
@@ -60,7 +69,6 @@ function ProductCard(props) {
 
       </CardContent>
       <CardActions className='product-actions'>
-
         <div className='product-actions-wrap'>
           <Typography color="text.secondary" className='product-stock'>
             {'Stock: ' + productStock}
@@ -75,7 +83,6 @@ function ProductCard(props) {
           </div>
           <Button size="small" className='product-add-button' onClick={() => setCount(1)}>Agregar <i><ShoppingCart /></i></Button>
         </div>
-
       </CardActions>
     </Card>
   );
