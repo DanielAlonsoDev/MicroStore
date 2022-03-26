@@ -1,13 +1,10 @@
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import './ProductCard.scss';
-import ProductGama from '../ProductGama/ProductGama';
-import ItemCounter from '../ItemCounter/ItemCounter';
+import './Item.scss';
 
-function ProductCard(props) {
+function Item(props) {
   //Props
   const { productName, productDescription, productPrice, productStock, productImage } = props;
   const productAltText = productName.replace(/\s+/g, '_');
@@ -27,19 +24,14 @@ function ProductCard(props) {
         <Typography color="text.secondary" sx={{ fontSize: 17 }} className='product-description'>
           {productDescription}
         </Typography>
-
         <Typography color="text.secondary" sx={{ fontSize: 22, color: '#17D7A0' }} className='product-price'>
           {'$' + productPrice}
         </Typography>
         <div>
-          <ProductGama className='product-gama' />
         </div>
       </CardContent>
-      <CardActions className='product-actions'>
-        <ItemCounter initialValue={1} stockValue={productStock}></ItemCounter>
-      </CardActions>
     </Card>
   );
 }
 
-export default ProductCard;
+export default Item;

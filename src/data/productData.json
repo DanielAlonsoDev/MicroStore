@@ -1,0 +1,26 @@
+{ "productData" : [
+    {
+        "productId" : "54654",
+        "productName" : "Procesador  Ryzen 9",
+        "productDescription" : "AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz",
+        "productPrice" : "500000",
+        "productStock" : "3",
+        "productImage" : "./images/procesador.webp"
+    },
+    {
+        "productId" : "46877",
+        "productName" : "Placa Madre Gigabyte H410m",
+        "productDescription" : "Linea: Ultra Durable",
+        "productPrice" : "120000",
+        "productStock" : "5",
+        "productImage" : "./images/board.webp"
+    },
+    {
+        "productId" : "46274",
+        "productName" : "Nvidia MSI Ventus XS",
+        "productDescription" : "GTX 1650 D6 VENTUS XS OC OC Edition",
+        "productPrice" : "340000",
+        "productStock" : "6",
+        "productImage" : "./images/grafica.webp"
+    }
+]}
