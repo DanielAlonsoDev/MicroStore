@@ -14,9 +14,7 @@ function ItemList(props) {
 
                     return <Item key={productId} productName={productName} productDescription={productDescription} productPrice={productPrice} productStock={productStock} productImage={productImage} />
                 })}
-
-                {console.table(productList)}
-                
+ 
             </div>
         </Container>
     );
