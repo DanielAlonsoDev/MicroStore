@@ -5,7 +5,8 @@
         "productDescription" : "AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz",
         "productPrice" : "500000",
         "productStock" : "3",
-        "productImage" : "./images/procesador.webp"
+        "productImage" : "./images/procesador.webp",
+        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
         "productId" : "46877",
@@ -13,7 +14,8 @@
         "productDescription" : "Linea: Ultra Durable",
         "productPrice" : "120000",
         "productStock" : "5",
-        "productImage" : "./images/board.webp"
+        "productImage" : "./images/board.webp",
+        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
         "productId" : "46274",
@@ -21,6 +23,7 @@
         "productDescription" : "GTX 1650 D6 VENTUS XS OC OC Edition",
         "productPrice" : "340000",
         "productStock" : "6",
-        "productImage" : "./images/grafica.webp"
+        "productImage" : "./images/grafica.webp",
+        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
 ]}
