@@ -1,5 +1,5 @@
 import './NavBar.scss';
-import logo from '../../images/MicroStore_Logo.svg';
+import logo from '../../Utils/images/MicroStore_Logo.svg';
 import ShoppingCart from '../ShoppingCart/ShopCart';
 
 function NavBar() {

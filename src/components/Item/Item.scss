@@ -1,52 +1,51 @@
+@import '../../Utils/scss/variables';
+
 .product-card {
+    img {
+        max-height:200px;
+        width: auto;
+    }
     .product-info{
+        border-top: 3px solid $color-main;
+        margin-top: 10px;
+        color: $color-text;
+
         display: grid;
-        grid-template-rows: 40px 60px 30px;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
-            'productName productName'
-            'description description'
-            'gama price';
+            "productName productName"
+            "productDescription productDescription"
+            "productStock productPrice"
+            "offset productButton";
 
         .product-name {
             grid-area: productName;
         }
-
         .product-description {
-            grid-area: description;
+            grid-area: productDescription;
         }
 
         .product-price {
-            grid-area: gama;
+            grid-area: productPrice;
+            font-weight: bold;
+            font-size: 1.4rem;
+            align-self: center;
         }
-        
-        .product-price {
-            grid-area: price;
-            text-align: right;
+
+        .product-stock {
+            grid-area: productStock;
+            align-self: center;
         }
-    }
-    .product-actions {
-        i {
-            color: #17D7A0;
-         }
 
-        &-wrap {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+        .product-button {
+            grid-area: productButton;
 
-            .add-controls {
-                display: flex;
-                align-items: center;
-            }
-            .product-add-button {
-                color: #3c3c3c;
-
-                i {
-                    margin-left: 4px;
-                }
+            button {
+                background-color: $color-main;
+                color: white;
+                border: none;
+                border-bottom: 4px solid darken($color: $color-main, $amount: 5);
             }
         }
     }

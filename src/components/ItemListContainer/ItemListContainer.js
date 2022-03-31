@@ -1,5 +1,5 @@
 import ItemList from "../ItemList/ItemList";
-import productJson from '../../data/productData.json';
+import productJson from '../../Utils/data/productData.json';
 import { useState, useEffect } from "react";
 
 

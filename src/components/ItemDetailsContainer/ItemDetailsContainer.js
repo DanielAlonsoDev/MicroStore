@@ -1,4 +1,4 @@
-import productJson from '../../data/productData.json';
+import productJson from '../../Utils/data/productData.json';
 import { useState, useEffect } from "react";
 import ItemDetails from '../ItemDetails/ItemDetails';
 
