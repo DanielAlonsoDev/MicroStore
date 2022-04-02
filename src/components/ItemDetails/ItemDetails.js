@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -9,8 +8,7 @@ function ItemDetails(props) {
 
     return (
         <section id='details-section'>
-            <Container>
-                <Row>
+            <Row>
                     <Col xs={12} md={6}>
                         <img src={productImage} alt={productName} />
                     </Col>
@@ -21,8 +19,7 @@ function ItemDetails(props) {
                         <p>Stock: {productStock}</p>
                         <p>{productDetails}</p>
                     </Col>
-                </Row>
-            </Container>
+            </Row>
         </section>
     );
 }

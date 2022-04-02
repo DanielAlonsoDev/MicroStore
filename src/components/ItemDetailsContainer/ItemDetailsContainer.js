@@ -26,9 +26,7 @@ function ItemDetailsContainer(props) {
     }, []);
 
     return (
-        <div>
-            <ItemDetails productInfo={productDetails}/>
-        </div>
+        <ItemDetails productInfo={productDetails}/>
     );
 }
 

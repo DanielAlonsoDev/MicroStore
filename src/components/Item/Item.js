@@ -8,7 +8,7 @@ function Item(props) {
   const productAltText = productName.replace(/\s+/g, '_');
 
   return (
-    <Card style={{ width: '18rem' }} className='product-card'>
+    <Card as={'article'} style={{ width: '18rem' }} className='product-card'>
       <div className='img-container'>
         <Card.Img src={productImage} alt={productAltText} className='img-fluid' />
       </div>
