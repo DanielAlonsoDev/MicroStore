@@ -1,5 +1,7 @@
 import './AsideBar.scss';
 import FilterOption from '../FilterOption/FilterOption';
+import StarIndicator from '../ProductGama/StarIndicator';
+import ProductGama from '../ProductGama/ProductGama';
 
 const dataMuck = [
     { title: 'Todos', count: 13, key: '1', category: 'paymentMethod' },
@@ -25,7 +27,7 @@ function AsideBar(Props) {
                 <h4>Método de pago</h4>
                 <ul>
                     {paymentMethodItems.map((item) => {
-                        return <li><FilterOption Item={item} key={item.key} /></li>
+                        return <li key={item.key}><FilterOption Item={item} /></li>
                     })}
                 </ul>
             </article>
@@ -33,13 +35,13 @@ function AsideBar(Props) {
                 <h4>Categorias</h4>
                 <ul>
                     {productCategoryItems.map((item) => {
-                        return <li><FilterOption Item={item} key={item.key} /></li>
+                        return <li key={item.key}><FilterOption Item={item}/></li>
                     })}
                 </ul>
             </article>
             <article>
                 <h4>Gama</h4>
-                <p>Comp. Estrellas</p>
+                <ProductGama />
             </article>
         </section>
     );

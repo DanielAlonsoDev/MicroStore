@@ -13,10 +13,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Container as={'main'} className='main-layout'>
+      <Container as={'main'} id='main-layout'>
+        <AsideBar />
         <ItemListContainer />
         <ItemDetailsContainer />
-        <AsideBar />
       </Container>
 
     </div>
