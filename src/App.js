@@ -1,24 +1,24 @@
 // ESTILOS
 import './App.css';
-import './components/style/main.scss'
+import './Utils/scss/main.scss'
 //Components
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsContainer';
-import AsideBar from './components/AsideBar/AsideBar';
-import { Container } from 'react-bootstrap';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Catalogue from './pages/Catalogue';
+import Home from './pages/Home';
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Container as={'main'} id='main-layout'>
-        <AsideBar />
-        <ItemListContainer />
-        <ItemDetailsContainer />
-      </Container>
-
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/home' element={<Home/>} />
+          <Route path='/catalogue' element={<Catalogue/>} />
+          <Route path='/*' element={<h1>Error 404</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

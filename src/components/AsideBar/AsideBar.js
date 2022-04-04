@@ -1,6 +1,5 @@
 import './AsideBar.scss';
-import FilterOption from '../FilterOption/FilterOption';
-import StarIndicator from '../ProductGama/StarIndicator';
+import FilterOption from './FilterOption';
 import ProductGama from '../ProductGama/ProductGama';
 
 const dataMuck = [

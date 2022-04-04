@@ -1,0 +1,67 @@
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#main-layout {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'area-1 area-2' 'area-3 area-3';
+
+    .grid-area-1 {
+        grid-area: area-1;
+    }
+
+    .grid-area-2 {
+        grid-area: area-2;
+    }
+
+    .grid-area-3 {
+        grid-area: area-3;
+    }
+}
+
+#landing-page {
+    .container-fluid {
+        padding: 0;
+    }
+    .welcome-image {
+        height: 500px;
+        background-image: url("../../../public/images/pexels-valentine-tanasovich-2588757.jpg");
+        background-size: cover;
+        padding: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-size: 60px;
+            color: white;
+            z-index: 10;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: -10;
+            }
+        }
+
+        p {
+            font-size: 30px;
+            color: white;
+            z-index: 10;
+        }
+    }
+}
