@@ -1,0 +1,9 @@
+%btn-base {
+    background-color: $color-main;
+    color: white;
+    border: none;
+    border-bottom: 0.5rem solid darken($color: $color-main, $amount: 5);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+}

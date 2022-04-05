@@ -13,32 +13,24 @@ function StarIndicator(props) {
     const starIcons = [EmptyStar, HalfStar, FullStar];
 
     //Alternamos el valor de la key de posicion de las estrellas
-        function changeIcon() {
-            switch (count) {
-                case 0:
-                    setCount(count + 1);
-                    break;
-                case 1:
-                    setCount(count + 1);
-                    break;
-                case 2:
-                    setCount(0);
-                    break;
-            }
+    function changeIcon() {
+        switch (count) {
+            case 2:
+                setCount(0);
+                break;
+            default:
+                setCount(count + 1);
+                break;
         }
+    }
 
     useEffect(() => {
         setStarIcon(starIcons[count]);
     }, [count]);
 
-    useEffect(()=>{
-        
-    });
-    
-
 
     return (
-        <button onClick={changeIcon}><img src={activeIcon} /></button>
+        <button onClick={changeIcon}><img src={activeIcon} alt='Icono_de_estrella' /></button>
     );
 }
 

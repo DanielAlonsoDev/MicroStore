@@ -5,12 +5,9 @@ import ProductGama from '../ProductGama/ProductGama';
 const dataMuck = [
     { title: 'Todos', count: 13, key: '1', category: 'paymentMethod' },
     { title: 'Pago en cuotas', count: 10, key: '2', category: 'paymentMethod' },
-    { title: 'Procesadores', count: 3, key: '3', category: 'productCategory' },
-    { title: 'Tarjetas Graficas', count: 3, key: '4', category: 'productCategory' },
-    { title: 'Memorias Ram', count: 4, key: '5', category: 'productCategory' },
-    { title: 'Coolers y ventiladores', count: 2, key: '6', category: 'productCategory' },
-    { title: 'Discos Duros', count: 5, key: '7', category: 'productCategory' },
-    { title: 'Otros', count: 6, key: '8', category: 'productCategory' }];
+    { title: 'Procesadores', count: 1, key: '3', category: 'productCategory' },
+    { title: 'Tarjetas Graficas', count: 1, key: '4', category: 'productCategory' },
+    { title: 'Placas Madre', count: 1, key: '8', category: 'productCategory' }];
 
 const paymentMethodItems = dataMuck.filter(item => item.category === 'paymentMethod');
 const productCategoryItems = dataMuck.filter(item => item.category === 'productCategory');

@@ -1,35 +1,44 @@
 @import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
 
 .product-card {
+    font-size: 2rem;
+    width: 36rem;
+
     img {
-        max-height:200px;
+        max-height: 25rem;
         width: auto;
     }
     .product-info{
-        border-top: 3px solid $color-main;
-        margin-top: 10px;
+        border-top: 0.3rem solid $color-main;
+        margin-top: 1.25rem;
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
         color: $color-text;
 
         display: grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto 7rem 6rem;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             "productName productName"
             "productDescription productDescription"
             "productStock productPrice"
-            "offset productButton";
+            "productButton productButton";
 
         .product-name {
             grid-area: productName;
+            font-size: 2.6rem;
         }
+        
         .product-description {
             grid-area: productDescription;
+            font-size: 2rem;
+
         }
 
         .product-price {
             grid-area: productPrice;
             font-weight: bold;
-            font-size: 1.4rem;
+            font-size: 2.6rem;
             align-self: center;
         }
 
@@ -42,10 +51,7 @@
             grid-area: productButton;
 
             button {
-                background-color: $color-main;
-                color: white;
-                border: none;
-                border-bottom: 4px solid darken($color: $color-main, $amount: 5);
+                @extend %btn-base;
             }
         }
     }

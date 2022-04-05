@@ -1,14 +1,15 @@
 import './Item.scss';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom'; 
 
 function Item(props) {
   //Props
-  const { productName, productDescription, productPrice, productImage, productStock } = props;
+  const { productId, productName, productDescription, productPrice, productImage, productStock } = props;
   const productAltText = productName.replace(/\s+/g, '_');
 
   return (
-    <Card as={'article'} style={{ width: '18rem' }} className='product-card'>
+    <Card as={'article'} className='product-card'>
       <div className='img-container'>
         <Card.Img src={productImage} alt={productAltText} className='img-fluid' />
       </div>
@@ -17,8 +18,8 @@ function Item(props) {
         <p className='product-description'>{productDescription}</p>
         <p className='product-stock text-center'>En stock: {productStock}</p>
         <p className='product-price text-center'>${productPrice}</p>
-        <div className='text-end product-button'>
-          <Button>Ver producto</Button>
+        <div className='text-center product-button'>
+          <Link to={'/products/' + productId}><Button>Ver producto</Button></Link>
         </div>
       </Card.Body>
     </Card>

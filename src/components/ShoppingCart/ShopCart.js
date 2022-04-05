@@ -1,12 +1,13 @@
 import './ShopCart.scss'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Badge from '@mui/material/Badge';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
-const ShoppingCart = ({items}) => {
+
+const ShoppingCart = ({ items }) => {
     return (
-        <Badge badgeContent={items} color="error">
-            <i><ShoppingCartIcon /></i>
-        </Badge>
+        <i>
+            <FontAwesomeIcon icon={faCartShopping} />
+        </i>
     );
 }
 

@@ -1,14 +1,27 @@
+html {
+    font-size: 8px;
+}
+
+#page-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .card-container {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    row-gap: 3.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 #main-layout {
     margin-top: 60px;
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 40rem 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: 'area-1 area-2' 'area-3 area-3';
 
@@ -30,7 +43,7 @@
         padding: 0;
     }
     .welcome-image {
-        height: 500px;
+        height: 62rem;
         background-image: url("../../../public/images/pexels-valentine-tanasovich-2588757.jpg");
         background-size: cover;
         padding: 0;
@@ -41,7 +54,7 @@
         align-items: center;
 
         h2 {
-            font-size: 60px;
+            font-size: 7.5rem;
             color: white;
             z-index: 10;
 
@@ -59,9 +72,44 @@
         }
 
         p {
-            font-size: 30px;
+            font-size: 4rem;
             color: white;
             z-index: 10;
         }
+
+    .btn-primary {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
     }
+
+    #category-section {
+        margin: 12rem 0 12rem 0;
+
+        h2 {
+            margin: 0;
+            font-size: 4rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+        
+        .category-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 40rem;
+    
+            article {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 25rem;
+            }
+        }
+    }
+    
 }

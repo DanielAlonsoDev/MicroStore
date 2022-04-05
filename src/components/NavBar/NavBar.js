@@ -15,7 +15,7 @@ function NavBar() {
                     <li><Link to='/catalogue'>Catálogo</Link></li>
                     <li className='shop-cart'>
                         <span>Carrito</span>
-                        <i><ShoppingCart items={1} /></i>
+                        <ShoppingCart />
                     </li>
                 </ul>
             </nav>

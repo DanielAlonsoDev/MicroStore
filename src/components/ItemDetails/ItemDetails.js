@@ -1,5 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
 
 import './ItemDetails.scss';
 
@@ -8,6 +10,7 @@ function ItemDetails(props) {
 
     return (
         <section id='details-section'>
+            <Container>
             <Row>
                     <Col xs={12} md={6}>
                         <img src={productImage} alt={productName} />
@@ -20,6 +23,7 @@ function ItemDetails(props) {
                         <p>{productDetails}</p>
                     </Col>
             </Row>
+            </Container>
         </section>
     );
 }
