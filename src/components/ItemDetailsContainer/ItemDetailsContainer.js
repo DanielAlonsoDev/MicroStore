@@ -10,7 +10,7 @@ function ItemDetailsContainer(props) {
 
     useEffect(() => {
         //Solicitamos la informacion del producto
-        fetch('https://run.mocky.io/v3/f69c4128-6647-4111-9dd3-75ec0819dbe3')
+        fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
             .then((response) => {
                 return response.json();
             })

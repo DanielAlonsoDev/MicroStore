@@ -3,8 +3,9 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'; 
 
+
 function Item(props) {
-  //Props
+  //Props   
   const { productId, productName, productDescription, productPrice, productImage, productStock } = props;
   const productAltText = productName.replace(/\s+/g, '_');
 
@@ -19,7 +20,7 @@ function Item(props) {
         <p className='product-stock text-center'>En stock: {productStock}</p>
         <p className='product-price text-center'>${productPrice}</p>
         <div className='text-center product-button'>
-          <Link to={'/products/' + productId}><Button>Ver producto</Button></Link>
+          <Link to={'/item/' + productId}><Button>Ver producto</Button></Link>
         </div>
       </Card.Body>
     </Card>

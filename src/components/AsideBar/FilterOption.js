@@ -1,8 +1,9 @@
+import {Link} from 'react-router-dom';
 
 function FilterOption(props) {
-    const {title, count} = props.Item;
+    const {title, count, url} = props.Item;
     return(
-        <div>{title} <span>({count})</span></div>
+        <Link to={'/catalogue/' + url}>{title} <span>({count})</span></Link>
     );
 }
 

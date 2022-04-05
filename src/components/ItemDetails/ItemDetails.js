@@ -12,15 +12,15 @@ function ItemDetails(props) {
         <section id='details-section'>
             <Container>
             <Row>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} lg={6}>
                         <img src={productImage} alt={productName} />
                     </Col>
-                    <Col xs={12} md={6} className='text-start'>
+                    <Col xs={12} lg={6} className='text-start'>
                         <h2 className='details-title'>{productName}</h2>
-                        <p>{productDescription}</p>
-                        <p>{productPrice}</p>
-                        <p>Stock: {productStock}</p>
-                        <p>{productDetails}</p>
+                        <p className='details-description'>{productDescription}</p>
+                        <p className='details-price'>{ '$' + productPrice}</p>
+                        <p className='details-stock'>{'Stock: ' + productStock}</p>
+                        <p className='details-details'>{productDetails}</p>
                     </Col>
             </Row>
             </Container>

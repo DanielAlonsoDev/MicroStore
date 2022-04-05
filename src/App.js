@@ -8,6 +8,7 @@ import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsC
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Catalogue from './pages/Catalogue';
 import Home from './pages/Home';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 function App() {
@@ -19,9 +20,9 @@ function App() {
             <NavBar />
             <Routes>
               <Route path='/home' element={<Home />} />
-              <Route path='/catalogue' element={<Catalogue />} />
+              <Route path='/catalogue/:productCategoryParam' element={<Catalogue />} />
               <Route path='/*' element={<h1>Error 404</h1>} />
-              <Route path='/products/:productIdParam' element={ <ItemDetailsContainer/> } />
+              <Route path='/item/:productIdParam' element={ <ItemDetailsContainer/> } />
             </Routes>
           </div>
           <Footer />

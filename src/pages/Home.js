@@ -1,5 +1,6 @@
-import { Container, Button } from 'react-bootstrap';
 import '../Utils/scss/main.scss';
+import { Button, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Home(params) {
     return (
@@ -8,7 +9,9 @@ function Home(params) {
                 <section className='welcome-image'>
                     <h2>Bienvenido a MicroStore</h2>
                     <p>Tu tienda de tecnología favorita</p>
-                    <Button variant='primary'>Ver catálogo</Button>
+                    <Link to={'/catalogue/all'}>
+                        <Button>Ver productos</Button>
+                    </Link>
                 </section>
             </Container>
             <Container>
@@ -16,16 +19,21 @@ function Home(params) {
                     <h2>Explora algunas de nuestras categorias</h2>
                     <div className='category-container'>
                         <article>
-                            <img src='./images/MotherBoard.svg' alt='MotherBoard' />
+                            <Link to={'/catalogue/motherboard'}><img src='./images/MotherBoard.svg' alt='MotherBoard' /></Link>
                             <h3>Placas Madre</h3>
                         </article>
                         <article>
-                            <img src='./images/GraphicCard.svg' alt='GraphicCard' />
+                            <Link to={'/catalogue/gpu'}>
+                                <img src='./images/GraphicCard.svg' alt='GraphicCard' />
+                            </Link>
                             <h3>Tarjetas Graficas</h3>
                         </article>
                         <article>
-                            <img src='./images/HardDrives.svg' alt='HardDrives' />
-                            <h3>Discos Duros</h3>
+                            <Link to={'/catalogue/cpu'}>
+                                <img src='./images/HardDrives.svg' alt='HardDrives' />
+                            </Link>
+
+                            <h3>Procesadores</h3>
                         </article>
                     </div>
                 </section>
