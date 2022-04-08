@@ -8,7 +8,7 @@ import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsC
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Catalogue from './pages/Catalogue';
 import Home from './pages/Home';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
@@ -19,10 +19,11 @@ function App() {
           <div className='content-wrap'>
             <NavBar />
             <Routes>
-              <Route path='/home' element={<Home />} />
+              <Route path='/' element={<Home />} />
               <Route path='/catalogue/:productCategoryParam' element={<Catalogue />} />
               <Route path='/*' element={<h1>Error 404</h1>} />
               <Route path='/item/:productIdParam' element={ <ItemDetailsContainer/> } />
+              <Route path='/cart' element={<Cart/>}/>
             </Routes>
           </div>
           <Footer />

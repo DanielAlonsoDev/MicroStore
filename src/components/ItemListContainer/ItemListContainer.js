@@ -6,10 +6,9 @@ import { useParams } from 'react-router-dom';
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const { productCategoryParam } = useParams();
-    const requestedCategory = productCategoryParam;
 
-    function getProducts() {
-        if (requestedCategory == 'all') {
+    function getProducts(requestedCategory) {
+        if (requestedCategory === 'all') {
             fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
                 .then((response) => {
                     return response.json();
@@ -24,14 +23,14 @@ function ItemListContainer() {
                     return response.json();
                 })
                 .then((data) => {
-                    const result = data.productData.filter(item => item.productCategory == productCategoryParam);
+                    const result = data.productData.filter(item => item.productCategory === requestedCategory);
                     setProducts(result);
                 });
         }
     }
 
     useEffect(() => {
-        getProducts();
+        getProducts(productCategoryParam);
     }, [productCategoryParam]);
 
 

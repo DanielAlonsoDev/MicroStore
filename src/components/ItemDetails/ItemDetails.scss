@@ -1,3 +1,6 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
 #details-section {
     font-size: 2rem;
     margin-top: 15rem;
@@ -20,5 +23,9 @@
 
     .details-details{
         font-size: 2rem;
+    }
+
+    .move-purchase {
+        @extend %btn-base;
     }
 }

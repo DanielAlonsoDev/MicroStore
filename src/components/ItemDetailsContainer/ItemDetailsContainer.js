@@ -23,7 +23,7 @@ function ItemDetailsContainer(props) {
             .catch(reason => {
                 console.log('Ocurrio un error: ' + reason);
             });
-    }, []);
+    }, [productIdParam]);
 
 
     return (

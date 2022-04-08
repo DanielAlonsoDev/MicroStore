@@ -7,8 +7,8 @@ const dataMuck = [
     { title: 'Pago en cuotas', count: 10, key: '2', category: 'paymentMethod' },
     { title: 'Procesadores', count: 2, key: '3', category: 'productCategory', url: 'cpu'},
     { title: 'Tarjetas Graficas', count: 3, key: '4', category: 'productCategory', url: 'gpu'},
-    { title: 'Placas Madre', count: 1, key: '8', category: 'productCategory', url: 'motherboard'},
-    { title: 'Todo', count: 6, key: '8', category: 'productCategory', url: 'all'}];
+    { title: 'Placas Madre', count: 1, key: '5', category: 'productCategory', url: 'motherboard'},
+    { title: 'Todo', count: 6, key: '6', category: 'productCategory', url: 'all'}];
 
 const paymentMethodItems = dataMuck.filter(item => item.category === 'paymentMethod');
 const productCategoryItems = dataMuck.filter(item => item.category === 'productCategory');
