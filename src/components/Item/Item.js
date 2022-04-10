@@ -1,6 +1,5 @@
 import './Item.scss';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState, useEffect } from 'react';
@@ -15,7 +14,6 @@ function Item(props) {
   const [currentStock, setCurrentStock] = useState(0);
   const [quantityToAdd, setQuantityToAdd] = useState(0);
   const [stateProcess, setStateProcess] = useState(false);
-  const [stockAvailable, setStockAvailable ] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {

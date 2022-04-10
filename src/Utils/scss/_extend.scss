@@ -7,3 +7,22 @@
     text-transform: uppercase;
     padding: 1rem 2rem;
 }
+
+@mixin media-size($sizeMin,$sizeMax) {
+
+    @if $sizeMax == null {
+        @media only screen and (min-width: $sizeMin) {
+            @content;
+        } 
+    
+    } @else if $sizeMin == null {
+        @media only screen and (max-width: $sizeMax) {
+            @content;
+        } 
+    
+    } @else {
+        @media (min-width: $sizeMin) and (max-width: $sizeMax) {
+            @content;
+        }
+    }
+}
