@@ -1,19 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import './ItemCount.scss';
 
 function ItemCount(props) {
-    const { count, actionIncrease, actionDecrease } = props;
+    const { stock , action } = props;
+    const [count, setCount] = useState(0);
 
-    useEffect(() => {
-        const selectedInput = document.querySelector('.itemCounter .stockCountInput');
-        selectedInput.value = count;
-    }, [count]);
+
+    function onAdd() {
+        if (count < stock) {
+            let newValue = count + 1;
+            setCount(newValue);
+            action(newValue);
+        }
+    }
+
+    function onRemove() {
+        if (count > 0) {
+            let newValue = count - 1;
+            setCount(newValue);
+            action(newValue);
+        }
+    }
 
     return (
         <div className="itemCounter">
-            <button onClick={actionDecrease}>-</button>
-            <input className='stockCountInput' type='text' />
-            <button onClick={actionIncrease}>+</button>
+            <button onClick={onRemove}>-</button>
+            <input className='stockCountInput' type='text' readOnly value={count}/>
+            <button onClick={onAdd}>+</button>
         </div>
     );
 }

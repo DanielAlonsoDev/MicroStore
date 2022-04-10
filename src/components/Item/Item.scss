@@ -16,17 +16,23 @@
         color: $color-text;
 
         display: grid;
-        grid-template-rows: auto auto 7rem 6rem;
+        grid-template-rows: auto auto 7rem 6rem 6rem;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             "productName productName"
             "productDescription productDescription"
             "productStock productPrice"
+            "productCounter productCounter"
             "productButton productButton";
 
         .product-name {
             grid-area: productName;
             font-size: 2.6rem;
+            
+            a{
+                text-decoration: none;
+                color: $color-text;
+            }
         }
         
         .product-description {
@@ -45,6 +51,10 @@
         .product-stock {
             grid-area: productStock;
             align-self: center;
+        }
+
+        .product-counter {
+            grid-area: productCounter;
         }
 
         .product-button {
