@@ -10,34 +10,23 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
 
-.card-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 3.5rem;
-    justify-items: center;
+    .content-wrap {
+        margin-top: 8rem;
+    }
 }
 
 #main-layout {
     margin-top: 60px;
     display: grid;
-    grid-template-columns: 40rem 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: 'area-1 area-2' 'area-3 area-3';
+    grid-template-columns: 1fr;
 
-    .grid-area-1 {
-        grid-area: area-1;
+    @include media-size(992px, null){
+        grid-template-columns: 40rem 1fr;
+        grid-template-rows: auto auto;
     }
 
-    .grid-area-2 {
-        grid-area: area-2;
-    }
-
-    .grid-area-3 {
-        grid-area: area-3;
-    }
+    
 }
 
 #landing-page {

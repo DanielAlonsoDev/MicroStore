@@ -9,27 +9,29 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Catalogue from './pages/Catalogue';
 import Home from './pages/Home';
 import Cart from './components/Cart/Cart';
-
+//Contextos
+import { CartProvider } from './Context/CartContext';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <div id='page-container'>
-          <div className='content-wrap'>
+      <CartProvider>
+        <BrowserRouter>
+          <div id='page-container'>
             <NavBar />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/catalogue/:productCategoryParam' element={<Catalogue />} />
-              <Route path='/*' element={<h1>Error 404</h1>} />
-              <Route path='/item/:productIdParam' element={ <ItemDetailsContainer/> } />
-              <Route path='/cart' element={<Cart/>}/>
-            </Routes>
+            <div className='content-wrap'>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/catalogue/:productCategoryParam' element={<Catalogue />} />
+                <Route path='/*' element={<h1>Error 404</h1>} />
+                <Route path='/item/:productIdParam' element={<ItemDetailsContainer />} />
+                <Route path='/cart' element={<Cart />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }

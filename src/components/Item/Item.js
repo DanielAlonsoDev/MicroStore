@@ -2,9 +2,10 @@ import './Item.scss';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+//Contextos
+import CartContext from '../../Context/CartContext';
 
 function Item(props) {
   //Props   
@@ -14,6 +15,7 @@ function Item(props) {
   const [currentStock, setCurrentStock] = useState(0);
   const [quantityToAdd, setQuantityToAdd] = useState(0);
   const [stateProcess, setStateProcess] = useState(false);
+  const { itemsOnCart, setItemsOnCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,6 +26,7 @@ function Item(props) {
     if (quantityToAdd > 0) {
       setStateProcess(true);
       setCurrentStock(currentStock - quantityToAdd);
+      setItemsOnCart(itemsOnCart + quantityToAdd);
     }
   }
 

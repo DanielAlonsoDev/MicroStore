@@ -1,4 +1,5 @@
 import Item from '../Item/Item';
+import './ItemList.scss';
 
 function ItemList(props) {
     const productList = props.Items;
