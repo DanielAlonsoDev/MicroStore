@@ -2,6 +2,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import { useNavigate } from 'react-router-dom';
+//Contextos
+import CartContext from '../../Context/CartContext';
+import { useContext } from 'react';
+
 
 
 import './ItemDetails.scss';
@@ -9,31 +13,37 @@ import ItemCount from '../ItemCount/ItemCount';
 import { useEffect, useState } from 'react';
 
 function ItemDetails(props) {
-    const { productName, productDescription, productPrice, productImage, productStock, productDetails } = props.productInfo;
+    const { productName, productDescription, productPrice, productImage, productStock, productDetails, productId } = props.productInfo;
     //Definicion de Estados
     const [currentStock, setCurrentStock] = useState(0);
     const [quantityToAdd, setQuantityToAdd] = useState(0);
     const [stateProcess, setStateProcess] = useState(false);
+    const { productsOnCart, productsCount, setProductsCount } = useContext(CartContext);
     const navigate = useNavigate();
 
-    useEffect(()=>{
+    const data = { productId, productName, productDescription, productPrice, productImage, productStock, quantityToAdd }
+
+    useEffect(() => {
         setCurrentStock(productStock);
-    },[productStock]);
+    }, [productStock]);
 
     function addToCart() {
         if (quantityToAdd > 0) {
             setStateProcess(true);
             setCurrentStock(currentStock - quantityToAdd);
+
+            productsOnCart.push(data);
+            setProductsCount(productsCount + 1);
         }
     }
 
     function moveToPurchase() {
         navigate('/cart');
     }
-    
+
     return (
         <section id='details-section'>
-            <Container>
+            <Container as={'main'}>
                 <Row>
                     <Col xs={12} lg={6}>
                         <img src={productImage} alt={productName} />

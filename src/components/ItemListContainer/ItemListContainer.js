@@ -1,38 +1,15 @@
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-
+import { getProductsByCategory } from '../../Utils/data/GetProducts';
 
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const { productCategoryParam } = useParams();
 
-    function getProducts(requestedCategory) {
-        if (requestedCategory === 'all') {
-            fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    setProducts(data.productData);
-                });
-        } 
-        else {
-            fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    const result = data.productData.filter(item => item.productCategory === requestedCategory);
-                    setProducts(result);
-                });
-        }
-    }
-
     useEffect(() => {
-        getProducts(productCategoryParam);
+        getProductsByCategory(productCategoryParam, setProducts);
     }, [productCategoryParam]);
-
 
     return (
         <ItemList Items={products} />

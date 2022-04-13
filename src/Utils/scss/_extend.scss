@@ -1,11 +1,37 @@
 %btn-base {
-    background-color: $color-main;
     color: white;
     border: none;
-    border-bottom: 0.5rem solid darken($color: $color-main, $amount: 5);
     font-size: 2rem;
     text-transform: uppercase;
     padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    transition: all ease 80ms;
+    position: relative;
+    top: 0;
+    display: inline-block;
+}
+
+@mixin createButton($colorTexto,$colorBase) {
+    @extend %btn-base;
+
+    /* SELECCION DE COLORES */
+    color: $colorTexto;
+    background-color: $colorBase;
+    box-shadow: 0rem 0.5rem 0rem darken($colorBase, 10%);
+
+    &:hover {
+        color: $colorTexto;
+        background-color: lighten($colorBase, $amount: 10%);
+        box-shadow: 0rem 0.5rem 0rem lighten(darken($colorBase, 10%), 5%);
+    }
+
+    &:active {
+        background-color: $colorBase;
+        /* se restan 6px para simular el movimiento del boton */
+        box-shadow: 0rem 0rem 0rem darken($colorBase, 25%);
+        top: 0.5rem;
+    }
 }
 
 @mixin media-size($sizeMin,$sizeMax) {

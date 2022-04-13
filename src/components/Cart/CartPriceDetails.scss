@@ -1,0 +1,30 @@
+@import '../../Utils/scss/variables'; 
+@import '../../Utils/scss/extend';
+
+.cart-price-details {
+    padding: 3rem 4rem;
+    border: 0.25rem solid #f5f5f5;
+
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    article {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 1rem;
+
+    }
+
+    h4 { 
+        font-size: 2rem;
+    }
+
+    button {
+        @include createButton('white',$color-main);
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}

@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './ItemCount.scss';
 
 function ItemCount(props) {
-    const { stock , action } = props;
+    const { stock, action, initial } = props;
     const [count, setCount] = useState(0);
-
 
     function onAdd() {
         if (count < stock) {
@@ -22,10 +21,16 @@ function ItemCount(props) {
         }
     }
 
+    useEffect(() => {
+        if(initial != undefined){
+            setCount(initial);
+        }
+    }, [])
+
     return (
         <div className="itemCounter">
             <button onClick={onRemove}>-</button>
-            <input className='stockCountInput' type='text' readOnly value={count}/>
+            <input className='stockCountInput' type='text' readOnly value={count} />
             <button onClick={onAdd}>+</button>
         </div>
     );

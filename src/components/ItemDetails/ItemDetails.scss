@@ -26,6 +26,6 @@
     }
 
     .move-purchase {
-        @extend %btn-base;
+        @include createButton('white',$color-main);;
     }
 }

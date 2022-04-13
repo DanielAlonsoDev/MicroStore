@@ -1,6 +1,15 @@
-function Cart(params) {
+import { Container } from 'react-bootstrap';
+import './Cart.scss';
+import CartProductsList from './CartProductsList';
+import CartPriceDetails from './CartPriceDetails';
+
+
+function Cart(props) {
     return(
-        <div>Aca va el carrito</div>
+        <Container as={'main'} id='cart-layout'>
+            <CartProductsList />
+            <CartPriceDetails />
+        </Container>
     );
 }
 

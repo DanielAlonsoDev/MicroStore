@@ -1,0 +1,11 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
+#cart-product-list {
+    margin-bottom: 3rem;
+
+    & > button {
+        @include createButton('white', $color-red);
+        margin-top: 2rem;
+    }
+}

@@ -3,9 +3,10 @@ import { createContext, useState } from "react";
 const CartContext = createContext();
 
 function CartProvider({children}) {
-    const [itemsOnCart, setItemsOnCart] = useState(0);
+    const [productsOnCart, setProductsOnCart] = useState([]);
+    const [productsCount, setProductsCount] = useState(0);
 
-    const data = {itemsOnCart, setItemsOnCart};
+    const data = {productsOnCart, setProductsOnCart, productsCount, setProductsCount};
 
     return(
         <CartContext.Provider value={data}>

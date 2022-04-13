@@ -61,7 +61,7 @@
             grid-area: productButton;
 
             button {
-                @extend %btn-base;
+                @include createButton('white',$color-main);;
             }
         }
     }
