@@ -15,7 +15,7 @@ function Item(props) {
   const [currentStock, setCurrentStock] = useState(0);
   const [quantityToAdd, setQuantityToAdd] = useState(0);
   const [stateProcess, setStateProcess] = useState(false);
-  const { productsOnCart, productsCount, setProductsCount } = useContext(CartContext);
+  const { productsOnCart, productsCount, setProductsCount, setProductsOnCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   const data = { productId, productName, productDescription, productPrice, productImage, productStock, quantityToAdd }
@@ -28,7 +28,8 @@ function Item(props) {
     if (quantityToAdd > 0) {
       setStateProcess(true);
       setCurrentStock(currentStock - quantityToAdd);
-      productsOnCart.push(data);
+      setProductsOnCart(productsOnCart => [...productsOnCart, data]);
+      //productsOnCart.push(data);
       setProductsCount(productsCount + 1);
     }
   }

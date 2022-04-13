@@ -20,13 +20,16 @@ function CartProductItem(props) {
         setProductsCount(productsCount-1);
     }
 
-    function estado() {
-        console.log(productsOnCart)
-    }
 
     useEffect(() => {
         setTotalPrice(productPrice * currentQuantity);
-    }, [currentQuantity, productPrice])
+    }, [currentQuantity, productPrice]);
+
+    useEffect(() =>{
+        if(currentQuantity === 0){
+            removeItem();
+        }
+    }, [currentQuantity]);
 
     return (
         <article className='product-card' id={productId}>
@@ -42,7 +45,6 @@ function CartProductItem(props) {
             </div>
             <div>
                 <button onClick={removeItem} className='btn-remove'><FontAwesomeIcon icon={faTrashCan} /></button>
-                <button onClick={estado} className='btn-remove'>Estado</button>
 
             </div>
         </article>
