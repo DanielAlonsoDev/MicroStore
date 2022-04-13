@@ -29,10 +29,22 @@ function ItemDetails(props) {
 
     function addToCart() {
         if (quantityToAdd > 0) {
-            setStateProcess(true);
-            setCurrentStock(currentStock - quantityToAdd);
-            setProductsOnCart(productsOnCart => [...productsOnCart, data]);
-            setProductsCount(productsCount + 1);
+            let existInCart = false;
+            for (let i = 0; i < productsOnCart.length; i++) {
+                if (productsOnCart[i].productId === productId) {
+                    existInCart = true;
+                }
+            }
+
+            if (existInCart !== true) {
+                setStateProcess(true);
+                setCurrentStock(currentStock - quantityToAdd);
+                setProductsOnCart(productsOnCart => [...productsOnCart, data]);
+                setProductsCount(productsCount + 1);
+            }
+            else {
+                alert('El producto ya se encuentra en el carrito');
+            }
         }
     }
 
