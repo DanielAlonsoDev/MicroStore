@@ -29,7 +29,7 @@ function Home(params) {
                             <h3>Tarjetas Graficas</h3>
                         </article>
                         <article>
-                            <Link to={'/catalogue/cpu'}>
+                            <Link to={'/catalogue/hhd-ssd'}>
                                 <img src='./images/HardDrives.svg' alt='HardDrives' />
                             </Link>
 

@@ -1,27 +1,37 @@
 import CartProductItem from './CartProductItem';
 import './CartProductsList.scss';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import CartContext from '../../Context/CartContext';
+import { Link } from 'react-router-dom';
 
 function CartProductsList(props) {
     const { productsOnCart, setProductsOnCart, setProductsCount } = useContext(CartContext);
+    const [existProductsOnCart, setExistProductsOnCart] = useState(false);
 
     function cleanCart() {
         setProductsOnCart([]);
         setProductsCount(0);
+        setExistProductsOnCart(false);
     }
 
-    useEffect(()=>{
-        console.table(productsOnCart);
-    }, [productsOnCart])
+    useEffect(() => {
+        if (productsOnCart.length !== 0) {
+            setExistProductsOnCart(true);
+        }
+
+        return () => {
+            setExistProductsOnCart(false);
+        }
+    }, [productsOnCart]);
 
     return (
         <section id='cart-product-list'>
-            {productsOnCart.map((item) => {
+            {existProductsOnCart ? (productsOnCart.map((item) => {
                 return <CartProductItem key={item.productId} data={item} />;
-            })}
-            <button onClick={cleanCart}>Vaciar Carrito</button>
+            })) : (<p className='no-products-message'>No hay productos en el carrito</p>)}
 
+            {existProductsOnCart ? <button className='btn-clean-cart' onClick={cleanCart}>Vaciar Carrito</button> : <Link to='/catalogue/all'><button className='btn-catalogue'>Ir al catalogo</button></Link>}
+            
         </section>
     );
 }

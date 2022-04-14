@@ -1,4 +1,3 @@
-import ItemCount from '../ItemCount/ItemCount';
 import './CartProductItem.scss';
 //Iconos
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,8 +8,8 @@ import { useContext } from 'react';
 import CartContext from '../../Context/CartContext';
 
 function CartProductItem(props) {
-    const { productId, productName, productPrice, quantityToAdd, productStock, productImage } = props.data;
-    const [currentQuantity, setCurrentQuantity] = useState(quantityToAdd);
+    const { productId, productName, productPrice, quantityToAdd, productImage } = props.data;
+    const [currentQuantity] = useState(quantityToAdd);
     const [totalPrice, setTotalPrice] = useState(productPrice * quantityToAdd);
     const { productsOnCart, setProductsOnCart, productsCount, setProductsCount } = useContext(CartContext);
 

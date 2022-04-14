@@ -10,7 +10,7 @@ import { useContext } from 'react';
 
 import './ItemDetails.scss';
 import ItemCount from '../ItemCount/ItemCount';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function ItemDetails(props) {
     const { productName, productDescription, productPrice, productImage, productStock, productDetails, productId } = props.productInfo;

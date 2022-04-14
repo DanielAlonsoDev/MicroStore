@@ -4,8 +4,20 @@
 #cart-product-list {
     margin-bottom: 3rem;
 
-    & > button {
-        @include createButton('white', $color-red);
+    button {
         margin-top: 2rem;
+    }
+
+    .no-products-message {
+        font-size: 3rem;
+        padding: 8rem 0rem;
+    }
+
+    .btn-clean-cart {
+        @include createButton('white', $color-red);
+    }
+
+    .btn-catalogue {
+        @include createButton('white', $color-main);
     }
 }

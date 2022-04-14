@@ -11,6 +11,12 @@ const ShoppingCart = ({ items }) => {
     const { productsCount } = useContext(CartContext);
     const [shopCartCount, setShopCartCount] = useState();
 
+    function showCount(){
+        if(shopCartCount !== 0){
+            return shopCartCount;
+        }
+    }
+
     useEffect(()=>{
         setShopCartCount(productsCount);
     }, [productsCount]);
@@ -18,7 +24,7 @@ const ShoppingCart = ({ items }) => {
     return (
         <i className='cart-notification'>
             <FontAwesomeIcon icon={faCartShopping} />
-            <span>{shopCartCount}</span>
+            <span>{showCount()}</span>
         </i>
     );
 }

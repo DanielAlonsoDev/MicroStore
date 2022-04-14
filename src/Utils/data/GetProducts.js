@@ -1,5 +1,5 @@
 function getProductsAll(action) {
-    fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
+    fetch('https://run.mocky.io/v3/d9251a48-070a-4572-a9d7-3f9e6a1229bd')
         .then((response) => {
             return response.json();
         })
@@ -10,7 +10,7 @@ function getProductsAll(action) {
 
 function getProductsByCategory(requestedCategory, action) {
     if (requestedCategory === 'all') {
-        fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
+        fetch('https://run.mocky.io/v3/d9251a48-070a-4572-a9d7-3f9e6a1229bd')
             .then((response) => {
                 return response.json();
             })
@@ -19,7 +19,7 @@ function getProductsByCategory(requestedCategory, action) {
             });
     }
     else {
-        fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
+        fetch('https://run.mocky.io/v3/d9251a48-070a-4572-a9d7-3f9e6a1229bd')
             .then((response) => {
                 return response.json();
             })
@@ -32,7 +32,7 @@ function getProductsByCategory(requestedCategory, action) {
 
 function getProductById(productIdParam, action) {
     //Solicitamos la informacion del producto
-    fetch('https://run.mocky.io/v3/5e1f9727-b977-4bb8-b8fe-b8327fc445d6')
+    fetch('https://run.mocky.io/v3/d9251a48-070a-4572-a9d7-3f9e6a1229bd')
         .then((response) => {
             return response.json();
         })

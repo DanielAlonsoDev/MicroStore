@@ -1,62 +1,74 @@
-{ "productData" : [
-    {
-        "productId" : "54654",
-        "productName" : "Procesador  Ryzen 9",
-        "productDescription" : "AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz",
-        "productPrice" : "500000",
-        "productStock" : "3",
-        "productCategory" : "cpu",
-        "productImage" : "/images/procesador.webp",
-        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-        "productId" : "46877",
-        "productName" : "Placa Madre Gigabyte H410m",
-        "productDescription" : "Linea: Ultra Durable",
-        "productPrice" : "120000",
-        "productStock" : "5",
-        "productCategory" : "motherboard",
-        "productImage" : "/images/board.webp",
-        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-        "productId" : "46274",
-        "productName" : "Nvidia MSI Ventus XS",
-        "productDescription" : "GTX 1650 D6 VENTUS XS OC OC Edition",
-        "productPrice" : "340000",
-        "productStock" : "6",
-        "productCategory" : "gpu",
-        "productImage" : "/images/grafica.webp",
-        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-        "productId" : "21578",
-        "productName" : "Procesador Intel Core i5-10400",
-        "productDescription" : "BX8070110400 de 6 núcleos y 4.3GHz de frecuencia con gráfica integrada",
-        "productPrice" : "190000",
-        "productStock" : "8",
-        "productCategory" : "cpu",
-        "productImage" : "/images/D_NQ_NP_934427-MLA45376780832_032021-O.webp",
-        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
 {
-        "productId" : "69871",
-        "productName" : "Nvidia Quadro P2000",
-        "productDescription" : "Tarjeta De Vídeo De 5 Gb Gddr5 De 12",
-        "productPrice" : "765000",
-        "productStock" : "2",
-        "productCategory" : "gpu",
-        "productImage" : "/images/D_NQ_NP_893243-MLC46955346999_082021-O.webp",
-        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-{
-        "productId" : "78145",
-        "productName" : "Nvidia Zotac Gaming GeForce GTX 16",
-        "productDescription" : "Tarjeta de video Nvidia Series GTX 1660 SUPER ZT-T16620F-10L 6GB",
-        "productPrice" : "59900",
-        "productStock" : "3",
-        "productCategory" : "gpu",
-        "productImage" : "/images/D_NQ_NP_973729-MLA45732152931_042021-O.webp",
-        "productDetails" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
-]}
+    "productData": [
+        {
+            "productId": "54654",
+            "productName": "Procesador  Ryzen 9",
+            "productDescription": "AMD Ryzen 9 3900X 100-100000023BOX de 12 núcleos y 4.6GHz",
+            "productPrice": "500000",
+            "productStock": "3",
+            "productCategory": "cpu",
+            "productImage": "/images/procesador.webp",
+            "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "productId": "46877",
+            "productName": "Placa Madre Gigabyte H410m",
+            "productDescription": "Linea: Ultra Durable",
+            "productPrice": "120000",
+            "productStock": "5",
+            "productCategory": "motherboard",
+            "productImage": "/images/board.webp",
+            "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "productId": "46274",
+            "productName": "Nvidia MSI Ventus XS",
+            "productDescription": "GTX 1650 D6 VENTUS XS OC OC Edition",
+            "productPrice": "340000",
+            "productStock": "6",
+            "productCategory": "gpu",
+            "productImage": "/images/grafica.webp",
+            "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "productId": "21578",
+            "productName": "Procesador Intel Core i5-10400",
+            "productDescription": "BX8070110400 de 6 núcleos y 4.3GHz de frecuencia con gráfica integrada",
+            "productPrice": "190000",
+            "productStock": "8",
+            "productCategory": "cpu",
+            "productImage": "/images/D_NQ_NP_934427-MLA45376780832_032021-O.webp",
+            "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "productId": "69871",
+            "productName": "Nvidia Quadro P2000",
+            "productDescription": "Tarjeta De Vídeo De 5 Gb Gddr5 De 12",
+            "productPrice": "765000",
+            "productStock": "2",
+            "productCategory": "gpu",
+            "productImage": "/images/D_NQ_NP_893243-MLC46955346999_082021-O.webp",
+            "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "productId": "78145",
+            "productName": "Nvidia Zotac Gaming GeForce GTX 16",
+            "productDescription": "Tarjeta de video Nvidia Series GTX 1660 SUPER ZT-T16620F-10L 6GB",
+            "productPrice": "59900",
+            "productStock": "3",
+            "productCategory": "gpu",
+            "productImage": "/images/D_NQ_NP_973729-MLA45732152931_042021-O.webp",
+            "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+            "productId": "98215",
+            "productName": "Disco sólido SSD interno Kingston SA400S37/480G",
+            "productDescription": "Disco sólido SSD interno Kingston A400 SA400S37/480G 480 GB",
+            "productPrice": "49300",
+            "productStock": "10",
+            "productCategory": "hhd-ssd",
+            "productImage": "/images/D_NQ_NP_751939-MLA46221843872_052021-O.webp",
+            "productDetails": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+    ]
+}
