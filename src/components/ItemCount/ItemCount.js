@@ -22,7 +22,7 @@ function ItemCount(props) {
     }
 
     useEffect(() => {
-        if(initial != undefined){
+        if(initial !== undefined){
             setCount(initial);
         }
     }, [])

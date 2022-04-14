@@ -1,6 +1,6 @@
 import CartProductItem from './CartProductItem';
 import './CartProductsList.scss';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import CartContext from '../../Context/CartContext';
 
 function CartProductsList(props) {
@@ -10,6 +10,10 @@ function CartProductsList(props) {
         setProductsOnCart([]);
         setProductsCount(0);
     }
+
+    useEffect(()=>{
+        console.table(productsOnCart);
+    }, [productsOnCart])
 
     return (
         <section id='cart-product-list'>

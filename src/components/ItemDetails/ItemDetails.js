@@ -15,17 +15,12 @@ import { useEffect, useState } from 'react';
 function ItemDetails(props) {
     const { productName, productDescription, productPrice, productImage, productStock, productDetails, productId } = props.productInfo;
     //Definicion de Estados
-    const [currentStock, setCurrentStock] = useState(0);
     const [quantityToAdd, setQuantityToAdd] = useState(0);
     const [stateProcess, setStateProcess] = useState(false);
     const { productsOnCart, productsCount, setProductsCount, setProductsOnCart } = useContext(CartContext);
     const navigate = useNavigate();
 
     const data = { productId, productName, productDescription, productPrice, productImage, productStock, quantityToAdd }
-
-    useEffect(() => {
-        setCurrentStock(productStock);
-    }, [productStock]);
 
     function addToCart() {
         if (quantityToAdd > 0) {
@@ -38,7 +33,6 @@ function ItemDetails(props) {
 
             if (existInCart !== true) {
                 setStateProcess(true);
-                setCurrentStock(currentStock - quantityToAdd);
                 setProductsOnCart(productsOnCart => [...productsOnCart, data]);
                 setProductsCount(productsCount + 1);
             }
@@ -63,7 +57,7 @@ function ItemDetails(props) {
                         <h2 className='details-title'>{productName}</h2>
                         <p className='details-description'>{productDescription}</p>
                         <p className='details-price'>{'$' + productPrice}</p>
-                        <p className='details-stock'>{'Stock: ' + currentStock}</p>
+                        <p className='details-stock'>{'Stock: ' + productStock}</p>
                         <p className='details-details'>{productDetails}</p>
 
                         <Row>

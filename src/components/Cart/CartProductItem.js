@@ -11,16 +11,17 @@ import CartContext from '../../Context/CartContext';
 function CartProductItem(props) {
     const { productId, productName, productPrice, quantityToAdd, productStock, productImage } = props.data;
     const [currentQuantity, setCurrentQuantity] = useState(quantityToAdd);
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(productPrice * quantityToAdd);
     const { productsOnCart, setProductsOnCart, productsCount, setProductsCount } = useContext(CartContext);
 
+    //Removemos el elemento del array de productos y del contador de productos
     function removeItem() {
         let result = productsOnCart.filter(item => item.productId !== productId);
         setProductsOnCart(result);
         setProductsCount(productsCount-1);
     }
 
-
+    //Calculamos el precio total del producto
     useEffect(() => {
         setTotalPrice(productPrice * currentQuantity);
     }, [currentQuantity, productPrice]);
@@ -39,7 +40,7 @@ function CartProductItem(props) {
             <div>
                 <h3>{productName}</h3>
                 <div className='wrap'>
-                    <ItemCount stock={productStock} initial={quantityToAdd} action={setCurrentQuantity} />
+                    <p>{quantityToAdd} Agregados</p>
                     <p className='product-price'>${totalPrice}</p>
                 </div>
             </div>

@@ -12,17 +12,12 @@ function Item(props) {
   const { productId, productName, productDescription, productPrice, productImage, productStock } = props;
   const productAltText = productName.replace(/\s+/g, '_');
   //Definicion de estados
-  const [currentStock, setCurrentStock] = useState(0);
   const [quantityToAdd, setQuantityToAdd] = useState(0);
   const [stateProcess, setStateProcess] = useState(false);
   const { productsOnCart, productsCount, setProductsCount, setProductsOnCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   const data = { productId, productName, productDescription, productPrice, productImage, productStock, quantityToAdd }
-
-  useEffect(() => {
-    setCurrentStock(productStock);
-  }, [productStock]);
 
   function addToCart() {
     if (quantityToAdd > 0) {
@@ -35,7 +30,6 @@ function Item(props) {
 
       if (existInCart !== true) {
         setStateProcess(true);
-        setCurrentStock(currentStock - quantityToAdd);
         setProductsOnCart(productsOnCart => [...productsOnCart, data]);
         setProductsCount(productsCount + 1);
       }
@@ -59,7 +53,7 @@ function Item(props) {
           <Link to={'/item/' + productId}>{productName}</Link>
         </Card.Title>
         <p className='product-description'>{productDescription}</p>
-        <p className='product-stock text-center'>En stock: {currentStock}</p>
+        <p className='product-stock text-center'>En stock: {productStock}</p>
         <p className='product-price text-center'>${productPrice}</p>
         <div className='text-center product-counter'>
           {stateProcess ? `${quantityToAdd} Agregados al  carrito` : <ItemCount stock={productStock} action={setQuantityToAdd} />}
