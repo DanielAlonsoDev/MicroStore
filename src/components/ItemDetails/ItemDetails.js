@@ -17,30 +17,10 @@ function ItemDetails(props) {
     //Definicion de Estados
     const [quantityToAdd, setQuantityToAdd] = useState(0);
     const [stateProcess, setStateProcess] = useState(false);
-    const { productsOnCart, productsCount, setProductsCount, setProductsOnCart } = useContext(CartContext);
+    const { addProductToCart } = useContext(CartContext);
     const navigate = useNavigate();
 
     const data = { productId, productName, productDescription, productPrice, productImage, productStock, quantityToAdd }
-
-    function addToCart() {
-        if (quantityToAdd > 0) {
-            let existInCart = false;
-            for (let i = 0; i < productsOnCart.length; i++) {
-                if (productsOnCart[i].productId === productId) {
-                    existInCart = true;
-                }
-            }
-
-            if (existInCart !== true) {
-                setStateProcess(true);
-                setProductsOnCart(productsOnCart => [...productsOnCart, data]);
-                setProductsCount(productsCount + 1);
-            }
-            else {
-                alert('El producto ya se encuentra en el carrito');
-            }
-        }
-    }
 
     function moveToPurchase() {
         navigate('/cart');
@@ -65,7 +45,7 @@ function ItemDetails(props) {
                                 {stateProcess ? `${quantityToAdd} Agregados al  carrito` : <ItemCount stock={productStock} action={setQuantityToAdd} />}
                             </Col>
                             <Col className='text-end'>
-                                {stateProcess ? <button className='move-purchase' onClick={moveToPurchase}>Completar Compra</button> : <button className='move-purchase' onClick={addToCart}>Agregar al carrito</button>}
+                                {stateProcess ? <button className='move-purchase' onClick={moveToPurchase}>Completar Compra</button> : <button className='move-purchase' onClick={() => addProductToCart(productId, quantityToAdd, setStateProcess, data)}>Agregar al carrito</button>}
                             </Col>
                         </Row>
                     </Col>
