@@ -43,7 +43,7 @@ function CartPriceDetails(props) {
                 <h4>Total</h4>
                 <p>${totalPrice}</p>
             </article>
-            <button>Pagar</button>
+            <button onClick={props.modalControl}>Completar Compra</button>
         </section>
     );
 }

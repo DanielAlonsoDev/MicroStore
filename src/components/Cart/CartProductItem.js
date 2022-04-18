@@ -34,7 +34,7 @@ function CartProductItem(props) {
     return (
         <article className='product-card' id={productId}>
             <div className='img-wrap'>
-                <img src={productImage} alt='Imagen' />
+                <img src={'/images/'+productImage} alt='Imagen' />
             </div>
             <div>
                 <h3>{productName}</h3>

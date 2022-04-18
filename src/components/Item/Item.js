@@ -26,7 +26,7 @@ function Item(props) {
   return (
     <Card as={'article'} className='product-card'>
       <div className='img-container'>
-        <Card.Img src={productImage} alt={productAltText} className='img-fluid' />
+        <Card.Img src={'/images/'+productImage} alt={productAltText} className='img-fluid' />
       </div>
       <Card.Body className='product-info text-start'>
         <Card.Title className='product-name'>
@@ -39,7 +39,7 @@ function Item(props) {
           {stateProcess ? `${quantityToAdd} Agregados al  carrito` : <ItemCount stock={productStock} action={setQuantityToAdd} />}
         </div>
         <div className='text-center product-button'>
-          {stateProcess ? <button className='move-purchase' onClick={moveToPurchase}>Completar Compra</button> : <button className='move-purchase' onClick={() => addProductToCart(productId, quantityToAdd, setStateProcess, data)}>Agregar al carrito</button>}
+          {stateProcess ? <button className='move-purchase' onClick={moveToPurchase}>Ir al carrito</button> : <button className='move-purchase' onClick={() => addProductToCart(productId, quantityToAdd, setStateProcess, data)}>Agregar al carrito</button>}
         </div>
       </Card.Body>
     </Card>

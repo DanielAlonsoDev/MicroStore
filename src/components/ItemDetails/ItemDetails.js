@@ -5,9 +5,6 @@ import { useNavigate } from 'react-router-dom';
 //Contextos
 import CartContext from '../../Context/CartContext';
 import { useContext } from 'react';
-
-
-
 import './ItemDetails.scss';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
@@ -31,7 +28,7 @@ function ItemDetails(props) {
             <Container as={'main'}>
                 <Row>
                     <Col xs={12} lg={6}>
-                        <img src={productImage} alt={productName} />
+                        <img src={'/images/'+productImage} alt={productName} />
                     </Col>
                     <Col xs={12} lg={6} className='text-start'>
                         <h2 className='details-title'>{productName}</h2>
@@ -45,7 +42,7 @@ function ItemDetails(props) {
                                 {stateProcess ? `${quantityToAdd} Agregados al  carrito` : <ItemCount stock={productStock} action={setQuantityToAdd} />}
                             </Col>
                             <Col className='text-end'>
-                                {stateProcess ? <button className='move-purchase' onClick={moveToPurchase}>Completar Compra</button> : <button className='move-purchase' onClick={() => addProductToCart(productId, quantityToAdd, setStateProcess, data)}>Agregar al carrito</button>}
+                                {stateProcess ? <button className='move-purchase' onClick={moveToPurchase}>Ir al carrito</button> : <button className='move-purchase' onClick={() => addProductToCart(productId, quantityToAdd, setStateProcess, data)}>Agregar al carrito</button>}
                             </Col>
                         </Row>
                     </Col>
