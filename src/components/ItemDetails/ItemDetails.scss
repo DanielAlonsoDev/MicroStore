@@ -25,6 +25,10 @@
         font-size: 2rem;
     }
 
+    .buttons-wrap {
+        margin-top: 4rem;
+    }
+
     .move-purchase {
         @include createButton('white',$color-main);;
     }

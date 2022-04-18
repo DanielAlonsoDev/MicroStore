@@ -3,7 +3,7 @@ import './Cart.scss';
 import CartProductsList from './CartProductsList';
 import CartPriceDetails from './CartPriceDetails';
 import ModalForm from './ModalForm';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 //Contexto
 import CartContext from '../../Context/CartContext';
 

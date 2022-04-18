@@ -1,18 +1,15 @@
 import './AsideBar.scss';
 import FilterOption from './FilterOption';
-import ProductGama from '../ProductGama/ProductGama';
-//hhd-ssd
-
-const dataMuck = [
-    { title: 'Procesadores', count: 2, key: '1', url: 'cpu'},
-    { title: 'Tarjetas Graficas', count: 3, key: '2', url: 'gpu'},
-    { title: 'Placas Madre', count: 1, key: '3', url: 'motherboard'},
-    { title: 'Discos Duro', count: 1, key: '4', url: 'hhd-ssd'},
-    { title: 'Todo', count: 7, key: '5', url: 'all'}];
-
-const productCategoryItems = dataMuck.filter(item => item.category === 'productCategory');
+import { getCategories } from '../../Utils/data/GetProducts';
+import { useEffect, useState } from 'react';
 
 function AsideBar(Props) {
+    const [categories, setCategories] = useState([]);
+
+    useEffect(()=>{
+        getCategories(setCategories);
+    }, []);
+
     return (
         <section id='aside-bar'>
             <div className="welcome-message">
@@ -22,7 +19,7 @@ function AsideBar(Props) {
             <article>
                 <h4>Categorias</h4>
                 <ul>
-                    {dataMuck.map((item) => {
+                    {categories.map((item) => {
                         return <li key={item.key}><FilterOption Item={item}/></li>
                     })}
                 </ul>

@@ -33,7 +33,7 @@ function Home(params) {
                                 <img src='./images/HardDrives.svg' alt='HardDrives' />
                             </Link>
 
-                            <h3>Procesadores</h3>
+                            <h3>Discos Duro</h3>
                         </article>
                     </div>
                 </section>

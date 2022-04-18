@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ItemDetails from '../ItemDetails/ItemDetails';
 import { getProductById } from '../../Utils/data/GetProducts';
 
@@ -9,9 +9,15 @@ import { getProductById } from '../../Utils/data/GetProducts';
 function ItemDetailsContainer(props) {
     const [productDetails, setProduct] = useState('');
     const { productIdParam } = useParams();
+    const navigate = useNavigate();
+
+    const moveTo404 = () => {
+        navigate('/404');
+        console.log('Mensaje de 404');
+    }
 
     useEffect(() => {
-        getProductById(productIdParam,setProduct);
+        getProductById(productIdParam,setProduct, moveTo404);
     }, [productIdParam]);
 
 

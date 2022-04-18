@@ -37,7 +37,7 @@ function ItemDetails(props) {
                         <p className='details-stock'>{'Stock: ' + productStock}</p>
                         <p className='details-details'>{productDetails}</p>
 
-                        <Row>
+                        <Row className='buttons-wrap'>
                             <Col>
                                 {stateProcess ? `${quantityToAdd} Agregados al  carrito` : <ItemCount stock={productStock} action={setQuantityToAdd} />}
                             </Col>

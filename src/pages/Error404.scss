@@ -1,0 +1,28 @@
+@import '../Utils/scss/variables';
+@import '../Utils/scss/extend';
+
+
+#error-404 {
+    font-size: 2rem;
+    color: $color-text;
+    margin-top: 12rem;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+        color: $color-main;
+    }
+
+    p {
+        font-size: 3rem;
+        margin-top: 6rem;
+    }
+}
