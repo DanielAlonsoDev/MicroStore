@@ -7,14 +7,14 @@ import { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import CartContext from '../../Context/CartContext';
 
-function CartProductItem(props) {
+const CartProductItem = (props) => {
     const { productId, productName, productPrice, quantityToAdd, productImage } = props.data;
     const [currentQuantity] = useState(quantityToAdd);
     const [totalPrice, setTotalPrice] = useState(productPrice * quantityToAdd);
     const { productsOnCart, setProductsOnCart, productsCount, setProductsCount } = useContext(CartContext);
 
     //Removemos el elemento del array de productos y del contador de productos
-    function removeItem() {
+    const removeItem = () => {
         let result = productsOnCart.filter(item => item.productId !== productId);
         setProductsOnCart(result);
         setProductsCount(productsCount-1);

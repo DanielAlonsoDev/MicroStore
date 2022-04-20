@@ -7,11 +7,11 @@ import { useContext, useEffect, useState } from 'react';
 //Contextos
 import CartContext from '../../Context/CartContext';
 
-const ShoppingCart = ({ items }) => {
+const ShoppingCart = () => {
     const { productsCount } = useContext(CartContext);
     const [shopCartCount, setShopCartCount] = useState();
 
-    function showCount(){
+    const showCount = () => {
         if(shopCartCount !== 0){
             return shopCartCount;
         }

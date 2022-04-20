@@ -5,7 +5,6 @@ const getProductById = async (productIdParam, action, errorAction) => {
     const productsDoc = doc(database, 'products', productIdParam);
     const productsDocSnap = await getDoc(productsDoc);
 
-
     if (productsDocSnap.exists()) {
         //Creamos el objeto del producto
         let product = productsDocSnap.data();

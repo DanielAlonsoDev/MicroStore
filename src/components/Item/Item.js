@@ -1,4 +1,4 @@
-import './Item.scss';
+ import './Item.scss';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 //Contextos
 import CartContext from '../../Context/CartContext';
 
-function Item(props) {
+const Item = (props) => {
   //Props   
   const { productId, productName, productDescription, productPrice, productImage, productStock } = props;
   const productAltText = productName.replace(/\s+/g, '_');
@@ -19,7 +19,7 @@ function Item(props) {
 
   const data = { productId, productName, productDescription, productPrice, productImage, productStock, quantityToAdd }
 
-  function moveToPurchase() {
+  const moveToPurchase = () => {
     navigate('/cart');
   }
 

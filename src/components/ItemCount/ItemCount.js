@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import './ItemCount.scss';
 
-function ItemCount(props) {
+const ItemCount = (props) => {
     const { stock, action, initial } = props;
     const [count, setCount] = useState(0);
 
-    function onAdd() {
+    const onAdd = () => {
         if (count < stock) {
             let newValue = count + 1;
             setCount(newValue);
@@ -13,7 +13,7 @@ function ItemCount(props) {
         }
     }
 
-    function onRemove() {
+    const onRemove = () => {
         if (count > 0) {
             let newValue = count - 1;
             setCount(newValue);

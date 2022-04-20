@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import './Footer.scss';
 
-function Footer(props) {
+const Footer = (props) => {
     return (
         <footer id='footer-site'>
             <Container className="footer-container">

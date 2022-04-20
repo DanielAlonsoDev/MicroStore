@@ -4,11 +4,11 @@ import { useContext, useEffect, useState } from 'react';
 import CartContext from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 
-function CartProductsList(props) {
+const CartProductsList = (props) => {
     const { productsOnCart, setProductsOnCart, setProductsCount } = useContext(CartContext);
     const [existProductsOnCart, setExistProductsOnCart] = useState(false);
 
-    function cleanCart() {
+    const cleanCart = () => {
         setProductsOnCart([]);
         setProductsCount(0);
         setExistProductsOnCart(false);

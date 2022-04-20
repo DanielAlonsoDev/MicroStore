@@ -8,17 +8,17 @@ import { useState, useContext } from 'react';
 import CartContext from '../../Context/CartContext';
 
 
-function Cart(props) {
+const Cart = (props) => {
     const [modalToggle, setModalToggle] = useState(false);
     const { productsOnCart } = useContext(CartContext);
 
-    function openModal() {
+    const openModal = () => {
         if(productsOnCart.length !== 0) {
             setModalToggle(true);
         }
     }
 
-    function closeModal() {
+    const closeModal = () => {
         setModalToggle(false);
     }
 

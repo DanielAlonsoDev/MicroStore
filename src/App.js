@@ -14,7 +14,7 @@ import Cart from './components/Cart/Cart';
 //Contextos
 import { CartProvider } from './Context/CartContext';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <CartProvider>

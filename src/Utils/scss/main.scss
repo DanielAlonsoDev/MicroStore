@@ -5,6 +5,14 @@ html {
     font-size: 8px;
 }
 
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(2);
+    font-size: 2rem;
+}
+
 #page-container {
     height: 100vh;
     display: flex;
@@ -95,6 +103,7 @@ html {
 
         h3 {
             font-size: 3rem;
+            font-weight: bold;
         }
         
         .category-container {

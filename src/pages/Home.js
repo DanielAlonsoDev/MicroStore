@@ -2,7 +2,7 @@ import '../Utils/scss/main.scss';
 import { Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function Home(params) {
+const Home = () => {
     return (
         <main id='landing-page'>
             <Container fluid>

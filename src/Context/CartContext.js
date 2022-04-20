@@ -2,11 +2,11 @@ import { createContext, useState } from "react";
 
 const CartContext = createContext();
 
-function CartProvider({children}) {
+const CartProvider = ({children}) => {
     const [productsOnCart, setProductsOnCart] = useState([]);
     const [productsCount, setProductsCount] = useState(0);
 
-    function addProductToCart(id, quantity, action, data) {
+    const addProductToCart = (id, quantity, action, data) => {
         if (quantity > 0) {
           let existInCart = false;
           for (let i = 0; i < productsOnCart.length; i++) {

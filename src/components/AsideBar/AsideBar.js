@@ -3,7 +3,7 @@ import FilterOption from './FilterOption';
 import { getCategories } from '../../Utils/data/GetProducts';
 import { useEffect, useState } from 'react';
 
-function AsideBar(Props) {
+const AsideBar = (Props) => {
     const [categories, setCategories] = useState([]);
 
     useEffect(()=>{

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
-function toggleMenu() {
+const toggleMenu = () => {
     let menu = document.getElementById('mobile-menu').getElementsByTagName('ul').item(0);
     if (menu.style.display === 'none') {
         menu.style.display = 'flex';
@@ -17,14 +17,12 @@ function toggleMenu() {
     }
 }
 
-function hideMenu() {
+const hideMenu = () => {
     let menu = document.getElementById('mobile-menu').getElementsByTagName('ul').item(0);
     menu.style.display = 'none';
-
 }
 
-function NavBar() {
-
+const NavBar = () => {
     return (
         <header id='header-sitio'>
             <div>

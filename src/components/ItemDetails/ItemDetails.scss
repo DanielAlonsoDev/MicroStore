@@ -32,4 +32,8 @@
     .move-purchase {
         @include createButton('white',$color-main);;
     }
+
+    h2 {
+        font-weight: bold;
+    }
 }

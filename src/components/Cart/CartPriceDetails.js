@@ -3,19 +3,19 @@ import './CartPriceDetails.scss';
 import { useContext, useEffect, useState } from 'react';
 import CartContext from '../../Context/CartContext';
 
-function CartPriceDetails(props) {
+const CartPriceDetails = (props) => {
     const { productsOnCart } = useContext(CartContext);
     const [subTotalPrice, setSubtotalPrice] = useState(0);
     const [taxesTotal, setTaxesTotal] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    useEffect(()=>{
+    useEffect(() => {
         let taxesResult = subTotalPrice * 0.19;
         setTaxesTotal(taxesResult);
         setTotalPrice(subTotalPrice + taxesResult);
     }, [subTotalPrice]);
 
-    function updateSutotalPrice() {
+    const updateSutotalPrice = () => {
         let value = 0;
         productsOnCart.forEach(element => {
             value = value + (element.productPrice * element.quantityToAdd);
