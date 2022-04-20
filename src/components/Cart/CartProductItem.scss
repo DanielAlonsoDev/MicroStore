@@ -2,6 +2,10 @@
 @import '../../Utils/scss/extend';
 
 #cart-product-list{
+    @include media-size(768px, null){
+        grid-template-columns: 1fr 1fr;
+    }
+
     .product-card {
         font-size: 2rem;
         height: 14rem;
@@ -37,12 +41,24 @@
         }
     
         .wrap {
-            display: flex;
-            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
 
-            .product-price {
-                margin-left: 3rem;
+            .itemCounter {
+                position: relative;
+                bottom: 1.5rem;
             }
+
+            @include media-size(768px, null){
+                display: flex;
+                width: 100%;
+
+                .unit-price, .total-price {
+                    margin-left: 3rem;
+                    display: inline-block;
+                }
+            }
+            
         }
     
         .btn-remove {

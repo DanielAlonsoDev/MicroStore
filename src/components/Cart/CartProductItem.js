@@ -31,7 +31,7 @@ const CartProductItem = (props) => {
         let index = productsOnCart.findIndex(item => item.productId === productId);
         productList[index].quantityToAdd = currentQuantity;
         setProductsOnCart([...productList]);
-        
+
         if (currentQuantity === 0) {
             removeItem();
         }
@@ -46,8 +46,10 @@ const CartProductItem = (props) => {
                 <h3>{productName}</h3>
                 <div className='wrap'>
                     <ItemCount stock={productStock} action={setCurrentQuantity} initial={currentQuantity} />
-                    <p className='product-price'>Unidad: ${productPrice}</p>
-                    <p className='product-price'>Total: ${totalPrice}</p>
+                    <div>
+                    <p className='unit-price'>Unidad: ${productPrice}</p>
+                    <p className='total-price'>Total: ${totalPrice}</p>
+                    </div>
                 </div>
             </div>
             <div>
