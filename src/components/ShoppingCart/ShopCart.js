@@ -8,18 +8,20 @@ import { useContext, useEffect, useState } from 'react';
 import CartContext from '../../Context/CartContext';
 
 const ShoppingCart = () => {
-    const { productsCount } = useContext(CartContext);
-    const [shopCartCount, setShopCartCount] = useState();
+    const { productsOnCart } = useContext(CartContext);
 
     const showCount = () => {
-        if(shopCartCount !== 0){
-            return shopCartCount;
-        }
+        //Recorremos el objeto y sumamos los elementos del quantityToAdd
+        if (productsOnCart.length !== 0) {
+            let value = 0;
+            for (let i = 0; i < productsOnCart.length; i++) {
+                value = value + productsOnCart[i].quantityToAdd;
+            }
+            return value;
+        } else {
+            return '';
+        }   
     }
-
-    useEffect(()=>{
-        setShopCartCount(productsCount);
-    }, [productsCount]);
 
     return (
         <i className='cart-notification'>

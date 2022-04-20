@@ -4,7 +4,6 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [productsOnCart, setProductsOnCart] = useState([]);
-  const [productsCount, setProductsCount] = useState(0);
 
   const addProductToCart = (id, quantity, action, data) => {
     if (quantity > 0) {
@@ -18,9 +17,10 @@ const CartProvider = ({ children }) => {
           let newQuantityValue = productsOnCart[i].quantityToAdd + quantity;
 
           if (newQuantityValue <= productsOnCart[i].productStock) {
-            productsOnCart[i].quantityToAdd = newQuantityValue;
+            let productList = productsOnCart;
+            productList[i].quantityToAdd =  newQuantityValue;
+            setProductsOnCart([...productList]);
             action(true);
-            setProductsCount(productsCount + quantity);
           } 
           else {
             alert('No existen suficientes productos en el inventario');
@@ -31,12 +31,11 @@ const CartProvider = ({ children }) => {
       if (existInCart == false) {
         action(true);
         setProductsOnCart(productsOnCart => [...productsOnCart, data]);
-        setProductsCount(productsCount + quantity);
       }
     }
   }
 
-  const data = { productsOnCart, setProductsOnCart, productsCount, setProductsCount, addProductToCart };
+  const data = { productsOnCart, setProductsOnCart, addProductToCart };
 
   return (
     <CartContext.Provider value={data}>

@@ -5,12 +5,11 @@ import CartContext from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 
 const CartProductsList = (props) => {
-    const { productsOnCart, setProductsOnCart, setProductsCount } = useContext(CartContext);
+    const { productsOnCart, setProductsOnCart } = useContext(CartContext);
     const [existProductsOnCart, setExistProductsOnCart] = useState(false);
 
     const cleanCart = () => {
         setProductsOnCart([]);
-        setProductsCount(0);
         setExistProductsOnCart(false);
     }
 
@@ -31,7 +30,7 @@ const CartProductsList = (props) => {
             })) : (<p className='no-products-message'>No hay productos en el carrito</p>)}
 
             {existProductsOnCart ? <button className='btn-clean-cart' onClick={cleanCart}>Vaciar Carrito</button> : <Link to='/catalogue/all'><button className='btn-catalogue'>Ir al catalogo</button></Link>}
-            
+
         </section>
     );
 }
