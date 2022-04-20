@@ -17,7 +17,7 @@ const CartProductItem = (props) => {
     const removeItem = () => {
         let result = productsOnCart.filter(item => item.productId !== productId);
         setProductsOnCart(result);
-        setProductsCount(productsCount-1);
+        setProductsCount(productsCount - quantityToAdd);
     }
 
     //Calculamos el precio total del producto
@@ -25,8 +25,8 @@ const CartProductItem = (props) => {
         setTotalPrice(productPrice * currentQuantity);
     }, [currentQuantity, productPrice]);
 
-    useEffect(() =>{
-        if(currentQuantity === 0){
+    useEffect(() => {
+        if (currentQuantity === 0) {
             removeItem();
         }
     }, [currentQuantity]);
@@ -34,13 +34,14 @@ const CartProductItem = (props) => {
     return (
         <article className='product-card' id={productId}>
             <div className='img-wrap'>
-                <img src={'/images/'+productImage} alt='Imagen' />
+                <img src={'/images/' + productImage} alt='Imagen' />
             </div>
             <div>
                 <h3>{productName}</h3>
                 <div className='wrap'>
                     <p>{quantityToAdd} Agregados</p>
-                    <p className='product-price'>${totalPrice}</p>
+                    <p className='product-price'>Unidad: ${productPrice}</p>
+                    <p className='product-price'>Total: ${totalPrice}</p>
                 </div>
             </div>
             <div>
