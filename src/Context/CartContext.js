@@ -4,6 +4,9 @@ const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [productsOnCart, setProductsOnCart] = useState([]);
+  const [subTotalPrice, setSubtotalPrice] = useState(0);
+  const [taxesTotal, setTaxesTotal] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const addProductToCart = (id, quantity, action, data) => {
     if (quantity > 0) {
@@ -35,7 +38,7 @@ const CartProvider = ({ children }) => {
     }
   }
 
-  const data = { productsOnCart, setProductsOnCart, addProductToCart };
+  const data = { productsOnCart, setProductsOnCart, addProductToCart, subTotalPrice, setSubtotalPrice, taxesTotal, setTaxesTotal, totalPrice, setTotalPrice };
 
   return (
     <CartContext.Provider value={data}>

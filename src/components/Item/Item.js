@@ -17,7 +17,7 @@ const Item = (props) => {
   const { addProductToCart } = useContext(CartContext);
   const navigate = useNavigate();
 
-  const data = { productId, productName, productDescription, productPrice, productImage, productStock, quantityToAdd }
+  const data = { productId, productName, productPrice, productImage, productStock, quantityToAdd }
 
   const moveToPurchase = () => {
     navigate('/cart');

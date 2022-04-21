@@ -4,13 +4,10 @@ import { useContext, useEffect, useState } from 'react';
 import CartContext from '../../Context/CartContext';
 
 const CartPriceDetails = (props) => {
-    const { productsOnCart } = useContext(CartContext);
-    const [subTotalPrice, setSubtotalPrice] = useState(0);
-    const [taxesTotal, setTaxesTotal] = useState(0);
-    const [totalPrice, setTotalPrice] = useState(0);
+    const { productsOnCart, subTotalPrice, setSubtotalPrice, taxesTotal, setTaxesTotal, totalPrice, setTotalPrice } = useContext(CartContext);
 
     useEffect(() => {
-        let taxesResult = subTotalPrice * 0.19;
+        let taxesResult = subTotalPrice * 0.13;
         setTaxesTotal(taxesResult);
         setTotalPrice(subTotalPrice + taxesResult);
     }, [subTotalPrice]);
