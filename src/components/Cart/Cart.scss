@@ -1,0 +1,18 @@
+@import '../../Utils/scss/variables'; 
+@import '../../Utils/scss/extend';
+
+#cart-layout {
+    margin-top: 6rem;
+    font-size: 2rem;
+    //Grid
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 3rem;
+}
+
+@include media-size(992px, null){
+    #cart-layout {
+        display: grid;
+        grid-template-columns: auto 40rem;
+    }
+}

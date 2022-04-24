@@ -1,0 +1,79 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
+
+#form-container {
+    font-size: 2rem;
+    color: $color-text;
+
+    form {
+        position: relative;
+        min-height: 40rem;
+        @extend %card-base;
+
+        .id-wrap {
+            text-align: center;
+
+            span {
+                color: $color-main;
+                font-weight: bold;
+            }
+        }
+
+        .id-wrap {
+            h2 {
+                font-size: 3.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .btn-catalogue {
+                @include createButton(white, $color-main);
+                margin-top: 2rem;
+            }
+        }
+
+        .form-wrap {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 4rem 3rem;
+
+            h2{
+                font-size: 3.5rem;
+                text-align: center;
+                text-transform: capitalize;
+            }
+    
+            article {
+                label {
+                    display: block;
+                    margin-bottom: 1rem;
+                }
+    
+                input {
+                    @extend %input-base;
+                }
+            }
+    
+            .btn-back {
+                @include createButton( $color-text, #f0f0f0);
+                width: 100%
+            }
+    
+            .btn-submit {
+                @include createButton(white, $color-main);
+            }
+        }
+    }
+
+    @include media-size(768px, null){
+        form {
+            .form-wrap {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            h2{
+                grid-area: 1/1/2/3;
+            }
+        }
+    }
+}

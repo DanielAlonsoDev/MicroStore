@@ -1,0 +1,36 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
+
+#aside-bar {
+    font-size: 2rem;
+    text-align: left;
+    color: $color-text;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10rem;
+
+    @include media-size(992px, null){
+        margin: 0;
+    }
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+    }
+
+    h4{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0em;
+    }
+
+    article {
+        margin-top: 25px;
+    }
+}

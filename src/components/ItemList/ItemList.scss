@@ -1,0 +1,23 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
+.card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3.5rem;
+    justify-items: center;
+    width: 100%;
+
+    @include media-size(768px, null){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-size(1400px, null){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+//576 768 992 1200 1400

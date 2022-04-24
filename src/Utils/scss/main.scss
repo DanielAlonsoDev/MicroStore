@@ -1,0 +1,125 @@
+@import './variables';
+@import './extend';
+
+html {
+    font-size: 8px;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(2);
+    font-size: 2rem;
+}
+
+#page-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .content-wrap {
+        margin-top: 8rem;
+    }
+}
+
+#main-layout {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include media-size(992px, null){
+        grid-template-columns: 40rem 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    
+}
+
+#landing-page {
+    .container-fluid {
+        padding: 0;
+    }
+    .welcome-image {
+        height: 62rem;
+        background-image: url("../../../public/images/pexels-valentine-tanasovich-2588757.jpg");
+        background-size: cover;
+        padding: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-size: 7.5rem;
+            color: white;
+            z-index: 10;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: -10;
+            }
+        }
+
+        p {
+            font-size: 4rem;
+            color: white;
+            z-index: 10;
+        }
+
+        a {
+            z-index: 10;
+
+            button {
+                margin-top: 4rem;
+                @include createButton('white',$color-main);;
+            }
+        }
+
+
+    .btn-primary {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+    }
+
+    #category-section {
+        margin: 12rem 0 12rem 0;
+
+        h2 {
+            margin: 0;
+            font-size: 4rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .category-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 40rem;
+    
+            article {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 25rem;
+            }
+        }
+    }
+    
+}

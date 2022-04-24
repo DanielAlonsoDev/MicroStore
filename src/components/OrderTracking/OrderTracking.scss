@@ -1,0 +1,63 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
+
+#tracking-section {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-height: 40rem;
+    //Card
+    @extend %card-base;
+
+    #loader {
+        top: 60%;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    input {
+        @extend %input-base;
+        width: 60rem;
+        margin-top: 3rem;
+    }
+
+    button {
+        @include createButton(white, $color-main);
+        width: 30rem;
+        margin-top: 4rem;
+    }
+
+    #order-info {
+        .user-info {
+            margin-top: 4rem;
+            h3 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }    
+        
+        .table-products, .table-price {
+            margin-top: 5rem;
+
+            th {
+                padding: 0rem 1rem;
+            }
+
+            td {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        button {
+            @include createButton( $color-text, #f0f0f0);
+            margin-top: 4rem;
+        }
+    }
+}

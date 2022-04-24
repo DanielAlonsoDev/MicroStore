@@ -1,0 +1,39 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
+#details-section {
+    font-size: 2rem;
+    margin-top: 15rem;
+
+    .details-title {
+        font-size: 3.2rem;
+    }
+
+    .details-description{
+        font-size: 2.5rem;
+    }
+
+    .details-price{
+        font-size: 3rem;
+    }
+
+    .details-stock{
+        font-size: 2.2rem;
+    }
+
+    .details-details{
+        font-size: 2rem;
+    }
+
+    .buttons-wrap {
+        margin-top: 4rem;
+    }
+
+    .move-purchase {
+        @include createButton('white',$color-main);;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+}

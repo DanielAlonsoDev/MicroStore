@@ -1,0 +1,68 @@
+@import '../../Utils/scss/variables';
+@import '../../Utils/scss/extend';
+
+.product-card {
+    font-size: 2rem;
+    width: 90%;
+
+    img {
+        max-height: 25rem;
+        width: auto;
+    }
+    .product-info{
+        border-top: 0.3rem solid $color-main;
+        margin-top: 1.25rem;
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+        color: $color-text;
+
+        display: grid;
+        grid-template-rows: auto auto 7rem 6rem 6rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "productName productName"
+            "productDescription productDescription"
+            "productStock productPrice"
+            "productCounter productCounter"
+            "productButton productButton";
+
+        .product-name {
+            grid-area: productName;
+            font-size: 2.6rem;
+            font-weight: bold;
+            a{
+                text-decoration: none;
+                color: $color-text;
+            }
+        }
+        
+        .product-description {
+            grid-area: productDescription;
+            font-size: 2rem;
+
+        }
+
+        .product-price {
+            grid-area: productPrice;
+            font-weight: bold;
+            font-size: 2.6rem;
+            align-self: center;
+        }
+
+        .product-stock {
+            grid-area: productStock;
+            align-self: center;
+        }
+
+        .product-counter {
+            grid-area: productCounter;
+        }
+
+        .product-button {
+            grid-area: productButton;
+
+            button {
+                @include createButton('white',$color-main);;
+            }
+        }
+    }
+}
