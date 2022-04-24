@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Catalogue from './pages/Catalogue';
 import Home from './pages/Home';
 import Error404 from './pages/Error404';
-
+import OrderTracking from './components/OrderTracking/OrderTracking';
 import Cart from './components/Cart/Cart';
 //Contextos
 import { CartProvider } from './Context/CartContext';
@@ -27,6 +27,7 @@ const App = () => {
                 <Route path='/catalogue/:productCategoryParam' element={<Catalogue />} />
                 <Route path='/*' element={ <Error404 />} />
                 <Route path='/item/:productIdParam' element={<ItemDetailsContainer />} />
+                <Route path='/tracking' element={ <OrderTracking /> } />
                 <Route path='/cart' element={<Cart />} />
               </Routes>
             </div>

@@ -12,6 +12,7 @@ const Cart = (props) => {
     const [modalToggle, setModalToggle] = useState(false);
     const { productsOnCart } = useContext(CartContext);
 
+    //Abrimos el formulario si existe al menos un producto
     const openModal = () => {
         if(productsOnCart.length !== 0) {
             setModalToggle(true);

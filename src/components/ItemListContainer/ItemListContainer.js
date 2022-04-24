@@ -15,35 +15,23 @@ const ItemListContainer = () => {
     }
 
     useEffect(() => {
-        //Cambiamos visibilidad de los elementos
-        let section = document.getElementById('item-list');
-        let loader = document.getElementById('loader');
-        section.style.display = 'none';
-
-        //SetTimeOut TEMPORAL para hacer perceptible el spinner
-        setTimeout(() => {
-            if (toggleLoader === false) {
-                section.style.display = 'block';
-                loader.style.display = 'none';
-            }
-        }, 300);
-    }, [toggleLoader]);
-
-
-    useEffect(() => {
         getProductsByCategory(productCategoryParam, dataSuccess);
     }, [productCategoryParam]);
 
     return (
         <>
-            <div id='loader'>
-                <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>
-            </div>
-            <div id='item-list'>
-                <ItemList Items={products} />
-            </div>
+            {toggleLoader ?
+                (   
+                    <div id='loader'>
+                        <Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                    </div>
+                ) : (
+                    <div id='item-list'>
+                        <ItemList Items={products} />
+                    </div>
+                )}
         </>
     );
 }

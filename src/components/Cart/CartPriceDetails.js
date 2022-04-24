@@ -12,6 +12,7 @@ const CartPriceDetails = (props) => {
         setTotalPrice(subTotalPrice + taxesResult);
     }, [subTotalPrice]);
 
+    //Calculamos el total de los productos
     const updateSutotalPrice = () => {
         let value = 0;
         productsOnCart.forEach(element => {

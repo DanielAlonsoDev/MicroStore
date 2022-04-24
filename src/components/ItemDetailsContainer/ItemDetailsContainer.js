@@ -15,6 +15,7 @@ const ItemDetailsContainer = () => {
         setToggleLoader(false);
     }
 
+    //Navegar a la pagina de error 404
     const moveTo404 = () => {
         navigate('/404');
         console.log('Mensaje de 404');
@@ -25,31 +26,20 @@ const ItemDetailsContainer = () => {
         getProductById(productIdParam, dataSuccess, moveTo404);
     }, [productIdParam]);
 
-    useEffect(() => {
-        //Cambiamos visibilidad de los elementos
-        let section = document.getElementById('details-section');
-        let loader = document.getElementById('loader');
-        section.style.display = 'none';
-
-        //SetTimeOut TEMPORAL para hacer perceptible el spinner
-        setTimeout(() => {
-            if (toggleLoader === false) {
-                section.style.display = 'block';
-                loader.style.display = 'none';
-            }
-        }, 300);
-    }, [toggleLoader]);
-
     return (
         <>
-            <div id='loader'>
-                <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>
-            </div>
-            <section id='details-section'>
-                <ItemDetails productInfo={productDetails} />
-            </section>
+            {toggleLoader ?
+                (
+                    <div id='loader'>
+                        <Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                    </div>
+                ) : (
+                    <section id='details-section'>
+                        <ItemDetails productInfo={productDetails} />
+                    </section>
+                )}
         </>
     );
 }

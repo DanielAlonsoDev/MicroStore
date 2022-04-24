@@ -38,9 +38,11 @@ const ItemDetails = (props) => {
 
                     <Row className='buttons-wrap'>
                         <Col>
+                            {/* Alternamos entre el itemCount y los elementos agregados al carrito */}
                             {stateProcess ? `${quantityToAdd} Agregados al  carrito` : <ItemCount stock={productStock} action={setQuantityToAdd} />}
                         </Col>
                         <Col className='text-end'>
+                            {/* Alternamos entre el boton de agregar y el boton de ir al carrito */}
                             {stateProcess ? <button className='move-purchase' onClick={moveToPurchase}>Ir al carrito</button> : <button className='move-purchase' onClick={() => addProductToCart(productId, quantityToAdd, setStateProcess, data)}>Agregar al carrito</button>}
                         </Col>
                     </Row>

@@ -13,6 +13,7 @@ const CartProductsList = (props) => {
         setExistProductsOnCart(false);
     }
 
+    //Alternamos entre la vista de carrito vacio y lista de productos
     useEffect(() => {
         if (productsOnCart.length !== 0) {
             setExistProductsOnCart(true);
