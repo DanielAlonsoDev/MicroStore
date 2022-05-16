@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 const AsideBar = (Props) => {
     const [categories, setCategories] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         getCategories(setCategories);
     }, []);
 
@@ -16,11 +16,12 @@ const AsideBar = (Props) => {
                 <h4>Bienvenido a MicroStore</h4>
                 <p>Tu tienda de tecnología favorita, donde tenemos todos los componentes  que necesitas.</p>
             </div>
+
             <article>
                 <h4>Categorias</h4>
                 <ul>
                     {categories.map((item) => {
-                        return <li key={item.key}><FilterOption Item={item}/></li>
+                        return <li key={item.key}><FilterOption Item={item} /></li>
                     })}
                 </ul>
             </article>

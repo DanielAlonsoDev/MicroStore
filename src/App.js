@@ -13,6 +13,7 @@ import OrderTracking from './components/OrderTracking/OrderTracking';
 import Cart from './components/Cart/Cart';
 //Contextos
 import { CartProvider } from './Context/CartContext';
+import Test from './pages/test';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
                 <Route path='/item/:productIdParam' element={<ItemDetailsContainer />} />
                 <Route path='/tracking' element={ <OrderTracking /> } />
                 <Route path='/cart' element={<Cart />} />
+                <Route path='/test' element={<Test />} />
               </Routes>
             </div>
             <Footer />
