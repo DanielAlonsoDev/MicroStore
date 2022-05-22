@@ -5,10 +5,6 @@ const Test = () => {
     return (
         <>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <ProductGama />
         </>
     )
 }

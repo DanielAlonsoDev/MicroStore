@@ -10,8 +10,9 @@ const valuesArray = [
     { min: 4, mid: 4.5, max: 5 }
 ]
 
-const ProductGama = () => {
-    const [pointsValue, setPointsValues] = useState(0);
+const ProductGama = (props) => {
+    const { interactive, initValue } = props;
+    const [pointsValue, setPointsValues] = useState(initValue);
 
     const updatePointsValue = (newValue) => {
         setPointsValues(newValue);
@@ -19,9 +20,22 @@ const ProductGama = () => {
 
     return (
         <div className='stars-container'>
-            { valuesArray.map( item => {
-               return <StarIndicator key={item.max} range={item} value={pointsValue} action={updatePointsValue} />
-            } ) }
+
+            {
+                interactive ? (
+                    //Estrellas con evento
+                    valuesArray.map(item => {
+                        return <StarIndicator key={item.max} range={item} value={pointsValue} action={updatePointsValue} enableEvent={interactive} />
+                    })
+
+                ) : (
+                    //Estrellas sin evento
+                    valuesArray.map(item => {
+                        return <StarIndicator key={item.max} range={item} value={pointsValue} enableEvent={interactive} />
+                    })
+                )
+            }
+            <span className='stars-counter'>{pointsValue}</span>
         </div>
     );
 }

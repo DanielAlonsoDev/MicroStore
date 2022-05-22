@@ -10,11 +10,17 @@
     }
 
     .details-description{
+        margin-top: 2rem;
         font-size: 2.5rem;
+    }
+
+    .details-gama {
+        margin-top: 1.5rem;
     }
 
     .details-price{
         font-size: 3rem;
+        font-weight: bold;
     }
 
     .details-stock{
@@ -25,8 +31,12 @@
         font-size: 2rem;
     }
 
-    .buttons-wrap {
+    .details-wrap {
         margin-top: 4rem;
+    }
+
+    .buttons-wrap {
+        margin-top: 2rem;
     }
 
     .move-purchase {

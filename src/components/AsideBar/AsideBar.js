@@ -2,6 +2,7 @@ import './AsideBar.scss';
 import FilterOption from './FilterOption';
 import { getCategories } from '../../Utils/data/GetProducts';
 import { useEffect, useState } from 'react';
+import ProductGama from '../ProductGama/ProductGama';
 
 const AsideBar = (Props) => {
     const [categories, setCategories] = useState([]);
@@ -24,6 +25,11 @@ const AsideBar = (Props) => {
                         return <li key={item.key}><FilterOption Item={item} /></li>
                     })}
                 </ul>
+            </article>
+
+            <article>
+                <h4>Gama de Producto</h4>
+                <ProductGama initValue={0} interactive={true} />
             </article>
         </section>
     );

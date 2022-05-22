@@ -8,9 +8,10 @@ import { useContext } from 'react';
 import './ItemDetails.scss';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
+import ProductGama from '../ProductGama/ProductGama';
 
 const ItemDetails = (props) => {
-    const { productName, productDescription, productPrice, productImage, productStock, productDetails, productId } = props.productInfo;
+    const { productName, productDescription, productPrice, productImage, productStock, productDetails, productId, productGama } = props.productInfo;
     //Definicion de Estados
     const [quantityToAdd, setQuantityToAdd] = useState(0);
     const [stateProcess, setStateProcess] = useState(false);
@@ -31,10 +32,18 @@ const ItemDetails = (props) => {
                 </Col>
                 <Col xs={12} lg={6} className='text-start'>
                     <h2 className='details-title'>{productName}</h2>
+                    <div className='details-gama'>Gama: <ProductGama initValue={productGama} interactive={false} /></div>
                     <p className='details-description'>{productDescription}</p>
-                    <p className='details-price'>{'$' + productPrice}</p>
-                    <p className='details-stock'>{'Stock: ' + productStock}</p>
                     <p className='details-details'>{productDetails}</p>
+
+                    <Row className='align-items-center details-wrap'>
+                        <Col>
+                            <p className='details-stock'>{'Stock: ' + productStock}</p>
+                        </Col>
+                        <Col className='text-end'>
+                            <p className='details-price'>{'$' + productPrice}</p>
+                        </Col>
+                    </Row>
 
                     <Row className='buttons-wrap'>
                         <Col>

@@ -9,6 +9,7 @@ const StarIndicator = (props) => {
     const { min, mid, max } = props.range;
     const productGama = props.value;
     const updateGama = props.action;
+    const { enableEvent } = props;
 
     //Array con los iconos de las estrellas 
     const starIcons = [EmptyStar, HalfStar, FullStar];
@@ -50,7 +51,13 @@ const StarIndicator = (props) => {
     }, [productGama, min, mid, max]);
 
     return (
-        <button onClick={changeIcon}><img src={activeIcon} alt='Icono_de_estrella' /></button>
+        <>
+            {enableEvent ? (
+                <button onClick={changeIcon}><img src={activeIcon} alt='Icono_de_estrella' /></button>
+            ) : (
+                <button><img src={activeIcon} alt='Icono_de_estrella' /></button>
+            )}
+        </>
     );
 }
 

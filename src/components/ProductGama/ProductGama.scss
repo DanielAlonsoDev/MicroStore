@@ -1,8 +1,17 @@
 .stars-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
     button {
         background-color: transparent;
         border: none;
         margin: 0;
         padding: 0 2px;
+    }
+
+    .stars-counter {
+        font-size: 2.1rem;
+        margin-left: 0.6rem;
     }
 }
